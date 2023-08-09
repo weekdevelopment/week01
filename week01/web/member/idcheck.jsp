@@ -17,14 +17,14 @@
         <input type="submit" value="아이디 중복 검사">
     </form>
     <script>
-        function invalidCheck(f){
-            var id = f.id.value;
-            if(id.length>12){
-                alert("아이디의 글자수는 12글자 이내입니다.");
-                f.id.focus();
-                return;
-            }
+    function invalidCheck(f){
+        var id = f.id.value;
+        if(id.length>12){
+            alert("아이디의 글자수는 12글자 이내입니다.");
+            f.id.focus();
+            return;
         }
+    }
     </script>
 </div>
 </body>

@@ -39,7 +39,7 @@
             <li class="item2">
                 <a href="biz.html" class="dp1">윜 News</a>
                 <ul class="sub">
-                    <li><a href="biz.html#text">윜 소식</a></li>
+                    <li><a href="/board/boardList.jsp">윜 소식</a></li>
                     <li><a href="biz.html#ref">언론보도</a></li>
                 </ul>
             </li>
