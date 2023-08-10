@@ -24,17 +24,17 @@
     pstmt.setInt(4, lev);
     pstmt.setInt(5, par);
     int cnt = pstmt.executeUpdate();
-    if(lev==0) {
+    if (lev == 0) {
         pstmt.close();
         sql = "update qna set par=qno where par=0 and lev=0";
         pstmt = conn.prepareStatement(sql);
         pstmt.executeUpdate();
         cnt++;
     }
-    if(cnt==2){
+    if (cnt == 2) {
         System.out.println("질문 글이 등록되었습니다.");
         response.sendRedirect("/qna/qnaList.jsp");
-    } else if(cnt==1){
+    } else if (cnt == 1) {
         System.out.println("답변 글이 등록되었습니다.");
         response.sendRedirect("/qna/qnaList.jsp");
     } else {

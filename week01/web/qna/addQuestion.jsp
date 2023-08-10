@@ -3,7 +3,7 @@
     int lev = Integer.parseInt(request.getParameter("lev"));
     int par = Integer.parseInt(request.getParameter("par"));
     String sel = "";
-    if(lev==0){
+    if (lev == 0) {
         sel = "질문";
     } else {
         sel = "답변";

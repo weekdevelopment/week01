@@ -20,7 +20,7 @@
     rs = pstmt.executeQuery();
     //4. 받아온 결과셋(ResultSet) 을 질문및답변 목록(qnaList)에 불러와 하나의 레코드씩 담기
     List<Qna> qnaList = new ArrayList<>();
-    while(rs.next()){
+    while (rs.next()) {
         Qna qna = new Qna();
         qna.setQno(rs.getInt("qno"));
         qna.setTitle(rs.getString("title"));
@@ -154,7 +154,7 @@
                         });
                     });
                 </script>
-                <% if(sid!=null) { %>
+                <% if (sid != null) { %>
                 <div class="btn_group">
                     <a href="/qna/addQuestion.jsp?lev=0&par=0" class="inbtn">질문하기</a>
                 </div>

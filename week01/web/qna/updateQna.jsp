@@ -20,7 +20,7 @@
     //5. 실행결과(ResultSet) 인 해당 Qna 1건 qna(질문및답변) 객체에 넣기
     rs = pstmt.executeQuery();
     Qna qna = new Qna();
-    if(rs.next()){
+    if (rs.next()) {
         qna.setQno(rs.getInt("qno"));
         qna.setTitle(rs.getString("title"));
         qna.setContent(rs.getString("content"));
@@ -32,7 +32,7 @@
         qna.setPar(rs.getInt("par"));
     }
     String sel = "";
-    if(qna.getLev()==0){
+    if (qna.getLev() == 0) {
         sel = "질문";
     } else {
         sel = "답변";
@@ -112,7 +112,7 @@
                         <tr>
                             <th>유형</th>
                             <td>
-                                <% if(qna.getLev()==0) { %>
+                                <% if (qna.getLev() == 0) { %>
                                 <span>질문</span>
                                 <% } else { %>
                                 <span>답변</span>
@@ -134,7 +134,7 @@
                         <tr>
                             <th>작성자</th>
                             <td>
-                                <% if(sid!=null && sid.equals("admin")) { %>
+                                <% if (sid != null && sid.equals("admin")) { %>
                                 <span title="<%=qna.getAuthor()%>"><%=qna.getName() %></span>
                                 <% } else { %>
                                 <span><%=qna.getName() %></span>
@@ -143,7 +143,7 @@
                         </tr>
                         <tr>
                             <td colspan="2">
-                                <% if(sid!=null && (sid.equals("admin") || sid.equals(qna.getAuthor()))) { %>
+                                <% if (sid != null && (sid.equals("admin") || sid.equals(qna.getAuthor()))) { %>
                                 <input type="submit" class="inbtn" value="<%=sel %> 수정하기">
                                 <% } %>
                                 <a href="/qna/qnaList.jsp" class="inbtn">목록</a>
