@@ -49,7 +49,6 @@
         .inbtn:first-child { float:left; }
         .inbtn:last-child { float:right; }
     </style>
-
     <link rel="stylesheet" href="../ft.css">
 </head>
 <body>
