@@ -1,4 +1,4 @@
-package com.chunjae.db;
+package com.week.db;
 import java.sql.*;
 public class MariaDBCon implements DBC {
     final String DRIVER = "org.mariadb.jdbc.Driver"; //클래스이름

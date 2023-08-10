@@ -1,4 +1,4 @@
-package com.chunjae.db;
+package com.week.db;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
