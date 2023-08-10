@@ -4,8 +4,8 @@
 <%@ page import="java.util.*" %>
 <%@ page import="java.util.Date" %>
 <%@ page import="java.text.*" %>
-<%@ page import="com.chunjae.db.*" %>
-<%@ page import="com.chunjae.vo.*" %>
+<%@ page import="com.week.db.*" %>
+<%@ page import="com.week.vo.*" %>
 <%@ include file="../encoding.jsp" %>
 <%
     //2. DB 연결
