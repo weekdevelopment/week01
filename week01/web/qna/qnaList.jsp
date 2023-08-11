@@ -132,10 +132,12 @@
                     <tr>
                         <td class="item1"><%=tot %></td>
                         <td class="item2">
-                            <% if(q.getLev()==0) { %>
+                            <% if (q.getLev() == 0) { %>
                             <a href="/qna/getQna.jsp?qno=<%=q.getQno()%>"><%=q.getTitle() %></a>
                             <% } else { %>
-                            <a style="padding-left:28px;" href="/qna/getQna.jsp?qno=<%=q.getQno()%>">[답변] <%=q.getTitle() %></a>
+                            <a style="padding-left:14px;" href="/qna/getQna.jsp?qno=<%=q.getQno()%>">
+                                <img style="padding-right: 6px;" src="../images/icon_reply.png" alt="[답변]"><%=q.getTitle() %>
+                            </a>
                             <% } %>
                         </td>
                         <td class="item3"><%=q.getName()%></td>
@@ -154,7 +156,7 @@
                         });
                     });
                 </script>
-                <% if (sid != null) { %>
+                <% if(sid!=null) { %>
                 <div class="btn_group">
                     <a href="/qna/addQuestion.jsp?lev=0&par=0" class="inbtn">질문하기</a>
                 </div>
