@@ -42,11 +42,10 @@
             width:1200px; margin: 0 auto; text-align: right; color:#fff;
             padding-top: 28px; padding-bottom: 28px; }
         .breadcrumb a { color:#fff; }
-        .frm { clear:both; width:1200px; margin:0 auto; padding-top: 80px; }
         .tb1 { width:800px; margin:50px auto; }
         .tb1 th { width:150px; line-height:32px; padding-top:8px; padding-bottom:8px;
             border-top:1px solid #333; border-bottom:1px solid #333;
-            background-color:deepskyblue; color:#fff; }
+            background-color:deepskyblue; color:#fff; vertical-align:middle; }
         .tb1 td { width:650px; line-height:32px; padding-top:8px; padding-bottom:8px;
             border-bottom:1px solid #333;
             padding-left: 14px; border-top:1px solid #333; }
@@ -81,7 +80,7 @@
                 <h2 class="page_tit"><%=sel %> 글쓰기</h2>
                 <br><br><hr><br><br>
                 <form action="addQuestionPro.jsp" method="post">
-                    <table>
+                    <table class="tb1">
                         <tbody>
                         <tr>
                             <th><label for="title">제목</label></th>
@@ -95,7 +94,7 @@
                         <tr>
                             <th><label for="content">내용</label></th>
                             <td>
-                                <textarea name="content" id="content" cols="80" rows="10" maxlength="990" class="indata2"></textarea>
+                                <textarea name="content" id="content" cols="80" rows="10" maxlength="990" class="indata2" required></textarea>
                             </td>
                         </tr>
                         </tbody>
