@@ -68,7 +68,6 @@
             width:1200px; margin: 0 auto; text-align: right; color:#fff;
             padding-top: 28px; padding-bottom: 28px; }
         .breadcrumb a { color:#fff; }
-        .frm { clear:both; width:1200px; margin:0 auto; padding-top: 80px; }
         .tb1 { width:800px; margin:50px auto; }
         .tb1 th { line-height:32px; padding-top:8px; padding-bottom:8px;
             border-top:1px solid #333; border-bottom:1px solid #333;
@@ -80,13 +79,13 @@
         .tb1 .item2 { width:65%; }
         .tb1 .item3 { width:10%; text-align: center; }
         .tb1 .item4 { width:15%; text-align: center; }
-        .indata { display:inline-block; width:300px; height: 48px; line-height: 48px;
-            text-indent:14px; font-size:18px; }
         .inbtn { display:block;  border-radius:100px;
             min-width:140px; padding-left: 24px; padding-right: 24px; text-align: center;
             line-height: 48px; background-color: #333; color:#fff; font-size: 18px; }
         .inbtn:first-child { float:left; }
         .inbtn:last-child { float:right; }
+        .reply { padding-left:14px; }
+        .reply img { padding-right: 6px; }
     </style>
     <link rel="stylesheet" href="../ft.css">
     <style>
@@ -94,12 +93,8 @@
         .btn_group:after { content:""; display:block; width:100%; clear: both; }
         .btn_group p {text-align: center;   line-height:3.6; }
     </style>
-
     <link rel="stylesheet" href="../jquery.dataTables.css">
     <script src="../jquery.dataTables.js"></script>
-    <style>
-        #myTable_length, #dataTables_filter { margin-top:20px; margin-bottom:20px; }
-    </style>
 </head>
 <body>
 <div class="container">
@@ -135,8 +130,8 @@
                             <% if (q.getLev() == 0) { %>
                             <a href="/qna/getQna.jsp?qno=<%=q.getQno()%>"><%=q.getTitle() %></a>
                             <% } else { %>
-                            <a style="padding-left:14px;" href="/qna/getQna.jsp?qno=<%=q.getQno()%>">
-                                <img style="padding-right: 6px;" src="../images/icon_reply.png" alt="[답변]"><%=q.getTitle() %>
+                            <a class="reply" href="/qna/getQna.jsp?qno=<%=q.getQno()%>">
+                                <img src="../images/icon_reply.png" alt="[답변]"><%=q.getTitle() %>
                             </a>
                             <% } %>
                         </td>
