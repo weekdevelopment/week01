@@ -30,10 +30,10 @@
     <nav class="gnb">
         <ul class="menu">
             <li class="item1">
-                <a href="company/company.jsp" class="dp1">회사소개</a>
+                <a href="/company/company.jsp" class="dp1">회사소개</a>
                 <ul class="sub">
-                    <li><a href="company/company.jsp">윜이란?</a></li>
-                    <li><a href="company/contribution.jsp">사회공헌</a></li>
+                    <li><a href="/company/company.jsp">윜이란?</a></li>
+                    <li><a href="/company/contribution.jsp">사회공헌</a></li>
                 </ul>
             </li>
             <li class="item2">
