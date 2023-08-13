@@ -42,8 +42,27 @@
         .container:first-child {padding-top: 50px;}
         .container:last-child {padding-bottom: 50px;}
         .container .img1 {  float: left; }
-        .container .txt1 { float: right; padding-top: 50px;}
+        .container .txt1 { float: right; width: 700px;}
         .container .txt1 p { vertical-align: middle;}
+        .img1_tit { margin-bottom: 20px; font-weight: bold; font-size: large;
+        }
+        .info_list {
+            float: left;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+        }
+        .info_wrap {font-size: 15px;
+            line-height: 28px;
+            letter-spacing: -0.3px;}
+        .info_wrap .info_sub_title {
+            font-weight: bold;
+        }
+        .info_wrap .info_sub_text {
+            word-break: keep-all;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
 
     </style>
 
@@ -65,43 +84,93 @@
         </div>
         <section class="page" id="page1">
             <div class="page_wrap">
-                <h2 class="page_tit">공지사항 글 쓰기</h2>
+                <h2 class="page_tit">윜크루가 되면</h2>
                 <hr>
                         <div class="row">
                             <section class="container">
                                 <div class="img1">
+                                    <p class="img1_tit">Time & Refresh</p>
                                     <img src="images/pics01.jpg" alt="" class="img2"/>
                                 </div>
                                 <div class="txt1">
-                                    <span>육아휴직</span>
-                                    <p>Quisque dictum. Pellentesque viverra  enim. Integer nisl risus, sagittis convallis, rutrum id, elementum.</p>
+                                    <div class="info_list">
+                                        <dl class="info_wrap">
+                                            <dt class="info_sub_title">자기돌봄 휴직</dt>
+                                            <dd class="info_sub_text">3년 이상 근속 시 자기개발이나 휴식을 위해 최대 6개월까지 무급 휴직 가능</dd>
+                                        </dl>
+                                        <dl class="info_wrap">
+                                            <dt class="info_sub_title">리프레시 플러스 휴가</dt>
+                                            <dd class="info_sub_text">2년 근속 시 재충전을 위해 연차 외에 추가적으로 15일의 유급휴가 부여</dd>
+                                        </dl>
+                                        <dl class="info_wrap">
+                                            <dt class="info_sub_title">워케이션</dt>
+                                            <dd class="info_sub_text">익숙한 공간을 떠나 새로운 공간에서의 몰입과 리프레시를 위해
+                                                최대 7일간 업무 공간 및 숙박(1인 1실), 식사 등 지원</dd>
+                                        </dl>
+                                    </div>
                                 </div>
                             </section>
                             <section class="container">
                                 <div class="img1">
+                                    <p class="img1_tit">Work Tools</p>
                                     <img src="images/pics11.jpg" alt="" class="img2"/>
                                 </div>
                                 <div class="txt1">
-                                    <span>육아휴직</span>
-                                    <p>Quisque dictum. Pellentesque viverra  enim. Integer nisl risus, sagittis convallis, rutrum id, elementum.</p>
+                                    <div class="info_list">
+                                        <dl class="info_wrap">
+                                            <dt class="info_sub_title">개인별 업무기기 예산</dt>
+                                            <dd class="info_sub_text">노트북, 모니터, 태블릿 등 본인의 업무에 맞게 업무 기기를 자유롭게 선택하여 사용할 수 있도록 2년에 최대 720만 원의 예산 지급</dd>
+                                        </dl>
+                                        <dl class="info_wrap">
+                                            <dt class="info_sub_title">스튜디오</dt>
+                                            <dd class="info_sub_text">전문 촬영 장비를 갖춘 사옥 내 12개 스튜디오 완비</dd>
+                                        </dl>
+                                        <dl class="info_wrap">
+                                            <dt class="info_sub_title">문화생활 지원</dt>
+                                            <dd class="info_sub_text">공연, 영화, 도서 등 문화생활 지원 (월 20만원)</dd>
+                                        </dl>
+                                    </div>
                                 </div>
                             </section>
                             <section class="container">
                                 <div class="img1">
+                                    <p class="img1_tit">Meal & Snack</p>
                                     <img src="images/pics12.jpg" alt="" class="img2"/>
                                 </div>
                                 <div class="txt1">
-                                    <span>육아휴직</span>
-                                    <p>Quisque dictum. Pellentesque viverra  enim. Integer nisl risus, sagittis convallis, rutrum id, elementum.</p>
+                                    <div class="info_list">
+                                        <dl class="info_wrap">
+                                            <dt class="info_sub_title">구내 식당</dt>
+                                            <dd class="info_sub_text">매일 아침/점심/저녁 건강하고 든든한 한 끼 식사를 무료로 제공하는 구내 식당</dd>
+                                        </dl>
+                                        <dl class="info_wrap">
+                                            <dt class="info_sub_title">Lounge </dt>
+                                            <dd class="info_sub_text">전문 바리스타가 내린 커피, 제철 식재료로 만든 착즙 주스, 갓 구운 빵을 임직원 할인가에 이용</dd>
+                                        </dl>
+                                    </div>
                                 </div>
                             </section>
                             <section class="container">
                                 <div class="img1">
-                                    <img src="images/pics13.jpg" alt="" class="img2"/>
+                                    <p class="img1_tit">Family</p>
+                                    <img src="images/pics12.jpg" alt="" class="img2"/>
                                 </div>
                                 <div class="txt1">
-                                    <span>육아휴직</span>
-                                    <p>Quisque dictum. Pellentesque viverra  enim. Integer nisl risus, sagittis convallis, rutrum id, elementum.</p>
+                                    <div class="info_list">
+                                        <dl class="info_wrap">
+                                            <dt class="info_sub_title">경조사 지원</dt>
+                                            <dd class="info_sub_text">결혼, 환갑, 출산, 장례 등 중요한 경조사에 축하와 조의를 전하고 휴가 및 경조비 지원</dd>
+                                        </dl>
+                                        <dl class="info_wrap">
+                                            <dt class="info_sub_title">육아휴직</dt>
+                                            <dd class="info_sub_text">법정 육아휴직 1년 외 추가로 1년 더, 총 2년까지 신청할 수 있는 제도
+                                            </dd>
+                                        </dl>
+                                        <dl class="info_wrap">
+                                            <dt class="info_sub_title">가족돌봄 휴가</dt>
+                                            <dd class="info_sub_text">가족의 간호 및 돌봄이 필요한 경우 최대 90일까지 사용할 수 있는 무급 휴가</dd>
+                                        </dl>
+                                    </div>
                                 </div>
                             </section>
                         </div>
