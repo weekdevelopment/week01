@@ -30,14 +30,14 @@
     <nav class="gnb">
         <ul class="menu">
             <li class="item1">
-                <a href="company.html" class="dp1">회사소개</a>
+                <a href="company/company.jsp" class="dp1">회사소개</a>
                 <ul class="sub">
-                    <li><a href="company.html#com">윜이란?</a></li>
-                    <li><a href="company.html#greet">사회공헌</a></li>
+                    <li><a href="company/company.jsp">윜이란?</a></li>
+                    <li><a href="company/contribution.jsp">사회공헌</a></li>
                 </ul>
             </li>
             <li class="item2">
-                <a href="biz.html" class="dp1">윜 News</a>
+                <a href="/board/boardList.jsp" class="dp1">윜 News</a>
                 <ul class="sub">
                     <li><a href="/board/boardList.jsp">윜 소식</a></li>
                     <li><a href="biz.html#ref">언론보도</a></li>
@@ -60,10 +60,10 @@
                 </ul>
             </li>
             <li class="item5">
-                <a href="brand.html" class="dp1">인재채용</a>
+                <a href="weekcrew/weekcrew.jsp" class="dp1">인재채용</a>
                 <ul class="sub">
-                    <li><a href="brand.html#intro">윜크루 되기</a></li>
-                    <li><a href="brand.html#organizion">윜크루 되면</a></li>
+                    <li><a href="weekcrew/weekcrew.jsp">윜크루 되면</a></li>
+                    <li><a href="weekcrew/apply.jsp">윜크루 되기</a></li>
                 </ul>
             </li>
         </ul>
