@@ -35,6 +35,7 @@
             width:1200px; margin: 0 auto; text-align: right; color:#fff;
             padding-top: 28px; padding-bottom: 28px; }
         .breadcrumb a { color:#fff; }
+
     </style>
     <link rel="stylesheet" href="../ft.css">
 
@@ -59,7 +60,7 @@
             <div class="page_wrap">
                 <h2 class="page_tit">오시는길</h2>
                 <div class="maparea">
-                    <div id="map" style="width:1100px;height:1000px; background:white; ">                        </div>
+                    <div id="map" style="margin: 0 auto; text-align: center; width:800px;height:600px; background:white; "></div>
                     <script>
                         var mapContainer = document.getElementById('map'), // 지도를 표시할 div
                             mapOption = {
