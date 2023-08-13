@@ -18,6 +18,7 @@
     <script src="https://code.jquery.com/jquery-latest.js"></script>
     <link rel="stylesheet" href="../common.css">
     <link rel="stylesheet" href="../hd.css">
+
     <style>
         /* 본문 영역 스타일 */
         .contents { clear:both; min-height:100vh;
@@ -36,24 +37,14 @@
             width:1200px; margin: 0 auto; text-align: right; color:#fff;
             padding-top: 28px; padding-bottom: 28px; }
         .breadcrumb a { color:#fff; }
-        .frm { clear:both; width:1200px; margin:0 auto; padding-top: 80px; }
+        .row { clear: both; height: 1500px; width: 1200px;}
+        .container { clear: both; height: 250px;}
+        .container:first-child {padding-top: 50px;}
+        .container:last-child {padding-bottom: 50px;}
+        .container .img1 {  float: left; }
+        .container .txt1 { float: right; padding-top: 50px;}
+        .container .txt1 p { vertical-align: middle;}
 
-        .tb1 { width:800px; margin:50px auto; }
-        .tb1 th { width:150px; line-height:32px; padding-top:8px; padding-bottom:8px;
-            border-top:1px solid #333; border-bottom:1px solid #333;
-            background-color:deepskyblue; color:#fff; }
-        .tb1 td { width:650px; line-height:32px; padding-top:8px; padding-bottom:8px;
-            border-bottom:1px solid #333;
-            padding-left: 14px; border-top:1px solid #333; }
-
-        .indata { display:inline-block; width:600px; height: 48px; line-height: 48px;
-            padding:14px; font-size:18px; }
-        .indata2 { width: 600px; padding: 14px; font-size:18px; }
-        .inbtn { display:block;  border-radius:100px;
-            min-width:140px; padding-left: 24px; padding-right: 24px; text-align: center;
-            line-height: 48px; background-color: #333; color:#fff; font-size: 18px; }
-        .inbtn:first-child { float:left; }
-        .inbtn:last-child { float:right; }
     </style>
 
     <link rel="stylesheet" href="../ft.css">
@@ -76,7 +67,44 @@
             <div class="page_wrap">
                 <h2 class="page_tit">공지사항 글 쓰기</h2>
                 <hr>
-
+                        <div class="row">
+                            <section class="container">
+                                <div class="img1">
+                                    <img src="images/pics01.jpg" alt="" class="img2"/>
+                                </div>
+                                <div class="txt1">
+                                    <span>육아휴직</span>
+                                    <p>Quisque dictum. Pellentesque viverra  enim. Integer nisl risus, sagittis convallis, rutrum id, elementum.</p>
+                                </div>
+                            </section>
+                            <section class="container">
+                                <div class="img1">
+                                    <img src="images/pics11.jpg" alt="" class="img2"/>
+                                </div>
+                                <div class="txt1">
+                                    <span>육아휴직</span>
+                                    <p>Quisque dictum. Pellentesque viverra  enim. Integer nisl risus, sagittis convallis, rutrum id, elementum.</p>
+                                </div>
+                            </section>
+                            <section class="container">
+                                <div class="img1">
+                                    <img src="images/pics12.jpg" alt="" class="img2"/>
+                                </div>
+                                <div class="txt1">
+                                    <span>육아휴직</span>
+                                    <p>Quisque dictum. Pellentesque viverra  enim. Integer nisl risus, sagittis convallis, rutrum id, elementum.</p>
+                                </div>
+                            </section>
+                            <section class="container">
+                                <div class="img1">
+                                    <img src="images/pics13.jpg" alt="" class="img2"/>
+                                </div>
+                                <div class="txt1">
+                                    <span>육아휴직</span>
+                                    <p>Quisque dictum. Pellentesque viverra  enim. Integer nisl risus, sagittis convallis, rutrum id, elementum.</p>
+                                </div>
+                            </section>
+                        </div>
             </div>
         </section>
     </div>

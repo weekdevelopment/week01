@@ -60,10 +60,10 @@
                 </ul>
             </li>
             <li class="item5">
-                <a href="weekcrew/weekcrew.jsp" class="dp1">인재채용</a>
+                <a href="/weekcrew/weekcrew.jsp" class="dp1">인재채용</a>
                 <ul class="sub">
-                    <li><a href="weekcrew/weekcrew.jsp">윜크루 되면</a></li>
-                    <li><a href="weekcrew/apply.jsp">윜크루 되기</a></li>
+                    <li><a href="/weekcrew/weekcrew.jsp">윜크루 되면</a></li>
+                    <li><a href="/weekcrew/apply.jsp">윜크루 되기</a></li>
                 </ul>
             </li>
         </ul>

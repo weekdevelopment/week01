@@ -70,7 +70,7 @@
     </header>
     <div class="contents" id="contents">
         <div class="breadcrumb">
-            <p><a href="">HOME</a>  &gt; <a href="/weekcrew/weekcrew.jsp">인재채용</a> &gt; <a href="/weekcrew/weekcrew.jsp">윜크루 되기</a> </p>
+            <p><a href="">HOME</a>  &gt <a href="/weekcrew/weekcrew.jsp">인재채용</a> &gt <a href="/weekcrew/weekcrew.jsp">윜크루 되기</a> </p>
         </div>
         <section class="page" id="page1">
             <div class="page_wrap">
