@@ -124,33 +124,6 @@
                         </tr>
                         </tbody>
                     </table>
-
-<%--                        <table class="tb1">--%>
-<%--                            <tbody>--%>
-<%--                            <tr>--%>
-<%--                                <th><label for="name">이름</label></th>--%>
-<%--                                <input type="text" name="name" id="name" class="indata" required/>--%>
-<%--                            </tr>--%>
-<%--                            <tr>--%>
-<%--                                <th><label for="email">이메일</label></th>--%>
-<%--                                <input type="email" name="email" id="email" class="indata" required/>--%>
-<%--                            </tr>--%>
-<%--                            <tr>--%>
-<%--                                <th><label for="content">1. 윜크루가 되고 싶은 지원동기를 서술하시오. (500자 내외)</label></th>--%>
-<%--                                <textarea rows="10" cols="80" maxlength="600" name="content" id="content" class="indata2" required></textarea>--%>
-<%--                            </tr>--%>
-<%--                            <tr>--%>
-<%--                                <th><label for="content2">2. 윜크루가 된 후 포부를 서술하시오. (500자 내외)</label></th>--%>
-<%--                                <textarea rows="10" cols="80" maxlength="600" name="content2" id="content2" class="indata2" required></textarea>--%>
-<%--                            </tr>--%>
-<%--                            <tr>--%>
-<%--                                <td colspan="2">--%>
-<%--                                    <input type="submit" value="지원하기" class="inbtn">--%>
-<%--                                    <input type="reset" value="취소" class="inbtn">--%>
-<%--                                </td>--%>
-<%--                            </tr>--%>
-<%--                            </tbody>--%>
-<%--                        </table>--%>
                 </form>
             </div>
         </section>
