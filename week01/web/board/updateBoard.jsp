@@ -99,7 +99,7 @@
     </header>
     <div class="contents" id="contents">
         <div class="breadscrumb">
-            <p><a href="">HOME</a>공지사항</p>
+            <p><a href="">HOME</a> &gt <span>공지사항</span> &gt <span>공지사항 수정하기</span> </p>
         </div>
         <section class="page" id="page1">
             <div class="page_wrap">
