@@ -70,7 +70,7 @@
         </header>
         <div class="contents" id="contents">
             <div class="breadcrumb">
-                <p><a href="">HOME</a><a href="/board/boardList.jsp">공지사항</a></p>
+                <p><a href="">HOME</a> &gt <span>공지사항</span> &gt <span>공지사항 글 쓰기</span> </p>
             </div>
             <section class="page" id="page1">
                 <div class="page_wrap">

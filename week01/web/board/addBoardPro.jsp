@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
 <%@ page import="java.sql.*" %>
-<%@ page import="com.chunjae.db.*" %>
+<%@ page import="com.week.db.*" %>
 <%
     //인코딩 및 보내온 데이터 받기
     //인코딩 3줄

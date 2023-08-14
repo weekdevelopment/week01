@@ -1,8 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
 <%@ page import="java.sql.*" %>
 <%@ page import="java.util.*" %>
-<%@ page import="com.chunjae.db.*" %>
-<%@ page import="com.chunjae.dto.*" %>
+<%@ page import="com.week.db.*" %>
+<%@ page import="com.week.dto.*" %>
 <%
     String id = (String )session.getAttribute("id"); //세션의 id 불러오기 (이미 로그인 했으니까 getparameter 아니고 세션으로!)
 
@@ -103,7 +103,7 @@
     </header>
     <div class="contents" id="contents">
         <div class="breadcrumb">
-            <p><a href="">HOME</a> &gt; <span>로그인</span></p>
+            <p><a href="">HOME</a> &gt; <span>마이페이지</span></p>
         </div>
         <section class="page" id="page1">
             <div class="page_wrap">

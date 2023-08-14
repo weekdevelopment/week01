@@ -1,8 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
 <%@ page import="java.util.*"%>
 <%@ page import="java.sql.*" %>
-<%@ page import="com.chunjae.dto.*" %>
-<%@ page import="com.chunjae.db.*" %>
+<%@ page import="com.week.dto.*" %>
+<%@ page import="com.week.db.*" %>
 <%
     Connection conn = null;
     PreparedStatement pstmt = null;
@@ -99,7 +99,7 @@
     </header>
     <div class="contents" id="contents">
         <div class="breadscrumb">
-            <p><a href="">HOME</a>공지사항</p>
+            <p><a href="">HOME</a> &gt <span>공지사항</span> &gt <span>공지사항 수정하기</span> </p>
         </div>
         <section class="page" id="page1">
             <div class="page_wrap">

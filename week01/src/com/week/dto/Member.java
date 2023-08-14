@@ -1,4 +1,4 @@
-package com.chunjae.dto;
+package com.week.dto;
 
 public class Member {
     private String id;
