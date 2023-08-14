@@ -22,6 +22,7 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
     <style>
         /* 본문 영역 스타일 */
+        .wrap { background-color: #fffcf2;}
         .contents { clear:both; min-height:100vh;
             background-image: url("../images/bg_visual_overview.jpg");
             background-repeat: no-repeat; background-position:center -250px; }
@@ -38,7 +39,7 @@
             width:1200px; margin: 0 auto; text-align: right; color:#fff;
             padding-top: 28px; padding-bottom: 28px; }
         .breadcrumb a { color:#fff; }
-        .row { clear: both; height: 1500px; width: 1200px;}
+        .row { clear: both; height: 900px; width: 1200px;}
         .container { clear: both; height: 250px;}
         .container:first-child {padding-top: 50px;}
         .container:last-child {padding-bottom: 50px;}

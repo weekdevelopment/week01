@@ -37,6 +37,54 @@
             width:1200px; margin: 0 auto; text-align: right; color:#fff;
             padding-top: 28px; padding-bottom: 28px; }
         .breadcrumb a { color:#fff; }
+        .inner1 {
+            margin: 30px auto;
+            width: 1200px;
+            box-sizing: border-box;
+        }
+        .btn-group {
+            display: flex;
+        }
+        .btn-group .button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 2.333rem;
+            min-width: 12.5rem;
+            height: 4.166rem;
+            font-size: 1.333rem;
+            line-height: 1;
+            border: 2px solid #cdcdcd;
+            -webkit-border-radius: 2.083rem;
+            -moz-border-radius: 2.083rem;
+            border-radius: 2.083rem;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-transition: all .15s ease-in .05s;
+            -moz-transition: all .15s ease-in .05s;
+            -ms-transition: all .15s ease-in .05s;
+            -o-transition: all .15s ease-in .05s;
+            transition: all .15s ease-in .05s;
+        }
+        .btn-group.tab-group {
+            justify-content: center;
+        }
+        .tab-group .active {
+            border-color: #f5be8b;
+            background: #ffffff;
+            color: #222;
+            margin: 0 0.416rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        .tab-group .btn_tab {
+            margin: 0 0.416rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #cdcdcd;
+            background: #fff;
+        }
         .inner { clear: both; margin: 30px 20%; overflow: hidden; }
         .inner > div {
             float: left; margin-left: 20px;
@@ -63,6 +111,22 @@
             <div class="page_wrap">
                 <h2 class="page_tit">사회공헌</h2>
                 <hr>
+                <div class="inner1">
+                    <div class="btn-group tab-group type3">
+                        <a ui-sref="textbook01" ui-sref-opts="{reload: true}" class="button btn_tab" href="/company/company.jsp">윜이란?</a>
+                        <a ui-sref="textbook02" ui-sref-opts="{reload: true}" class="button btn_tab" href="/company/company.jsp#scroll">윜 스토리</a>
+                        <a ui-sref="textbook03" ui-sref-opts="{reload: true}" class="button active scroll_move" href="/company/contribution.jsp">사회공헌</a>
+                        <!-- <a href="#" class="button btn_tab">XR</a> -->
+                    </div>
+                </div>
+                <script>
+                    $(document).ready(function($) {
+                        $(".scroll_move").click(function(event){
+                            event.preventDefault();
+                            $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
+                        });
+                    });
+                </script>
                 <div class="inner">
                     <span>우리 아이들의 행복한 내일을 위해 Week가 끊임 없는 노력을 하겠습니다.</span>
                         <div class="img-area">

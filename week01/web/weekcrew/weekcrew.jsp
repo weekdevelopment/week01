@@ -23,7 +23,7 @@
         /* 본문 영역 스타일 */
         .contents { clear:both; min-height:100vh;
             background-image: url("../images/bg_visual_overview.jpg");
-            background-repeat: no-repeat; background-position:center -250px; }
+            background-repeat: no-repeat; background-position:center -250px; height: 1550px;}
         .contents::after { content:""; clear:both; display:block; width:100%; }
 
         .page { clear:both; width: 100vw; height: 100vh; position:relative; }
@@ -38,11 +38,11 @@
             padding-top: 28px; padding-bottom: 28px; }
         .breadcrumb a { color:#fff; }
         .row { clear: both; height: 1500px; width: 1200px;}
-        .container { clear: both; height: 250px;}
+        .container { clear: both; height: 250px; margin: 50px auto;}
         .container:first-child {padding-top: 50px;}
         .container:last-child {padding-bottom: 50px;}
         .container .img1 {  float: left; }
-        .container .txt1 { float: right; width: 700px;}
+        .container .txt1 { float: right; width: 700px; padding-top: 30px; }
         .container .txt1 p { vertical-align: middle;}
         .img1_tit { margin-bottom: 20px; font-weight: bold; font-size: large;
         }
@@ -90,7 +90,7 @@
                             <section class="container">
                                 <div class="img1">
                                     <p class="img1_tit">Time & Refresh</p>
-                                    <img src="images/pics01.jpg" alt="" class="img2"/>
+                                    <img src="images/img_refresh.jpg" alt="" class="img2"/>
                                 </div>
                                 <div class="txt1">
                                     <div class="info_list">
@@ -113,7 +113,7 @@
                             <section class="container">
                                 <div class="img1">
                                     <p class="img1_tit">Work Tools</p>
-                                    <img src="images/pics11.jpg" alt="" class="img2"/>
+                                    <img src="images/img_worktools.jpg" alt="" class="img2"/>
                                 </div>
                                 <div class="txt1">
                                     <div class="info_list">
@@ -135,7 +135,7 @@
                             <section class="container">
                                 <div class="img1">
                                     <p class="img1_tit">Meal & Snack</p>
-                                    <img src="images/pics12.jpg" alt="" class="img2"/>
+                                    <img src="images/img_mealandsnack.jpg" alt="" class="img2"/>
                                 </div>
                                 <div class="txt1">
                                     <div class="info_list">
@@ -153,7 +153,7 @@
                             <section class="container">
                                 <div class="img1">
                                     <p class="img1_tit">Family</p>
-                                    <img src="images/pics12.jpg" alt="" class="img2"/>
+                                    <img src="images/img_family.jpg" alt="" class="img2"/>
                                 </div>
                                 <div class="txt1">
                                     <div class="info_list">
