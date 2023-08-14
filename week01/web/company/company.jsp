@@ -23,12 +23,12 @@
     <style>
         /* 본문 영역 스타일 */
         .wrap { background-color: #fffcf2;}
-        .contents { clear:both; min-height:100vh;
+        .contents { clear:both; height:1700px;
             background-image: url("../images/bg_visual_overview.jpg");
             background-repeat: no-repeat; background-position:center -250px; }
         .contents::after { content:""; clear:both; display:block; width:100%; }
 
-        .page { clear:both; width: 100vw; height: 100vh; position:relative; }
+        .page { clear:both; width: 100vw; position:relative; }
         .page::after { content:""; display:block; width: 100%; clear:both; }
 
         .page_wrap { clear:both; width: 1200px; height: auto; margin:0 auto; }
@@ -40,17 +40,41 @@
             padding-top: 28px; padding-bottom: 28px; }
         .breadcrumb a { color:#fff; }
         .row { clear: both; height: 900px; width: 1200px;}
-        .container { clear: both; height: 250px;}
-        .container:first-child {padding-top: 50px;}
+        .container { clear: both; height: 130px;}
+        .container:first-child {padding-top: 50px; padding-left: 393px;}
         .container:last-child {padding-bottom: 50px;}
-        .container .img1 {  float: left; }
-        .container .txt1 { float: right; width: 700px;}
         .container .txt1 p { vertical-align: middle;}
-        .img1_tit { margin-bottom: 20px; font-weight: bold; font-size: large;
+        .txt1 {
+            width: 1000px;
+            margin: 40px auto;
         }
-        .container h2 {
-            font-size:48px; text-align: center;  color:#f5be8b;
+        .img1 {
+            padding: 0 100px;
+            width: 1000px;
+            height: 650px;
         }
+        .img2 {
+            padding: 50px 100px;
+            width: 1000px;
+            height: 150px;
+        }
+        .img1_tit { margin-bottom: 40px; font-weight: bold; font-size: large; text-align: center;
+        }
+        .container span {
+            font-size:48px; text-align: center;  color: #000000; font-weight: 900;
+        }
+        .container span:nth-child(2) {
+            font-size:48px; text-align: center;  color: #ffde34;
+        }
+        container:last-child {
+            clear: both;
+        }
+        #scroll2 {font-size: 48px;
+            text-align: center;
+            color: #000000;
+            font-weight: 900;
+            /* margin-top: 150px; */
+            padding-left: 393px;}
         .inner {
             margin: 30px auto;
             width: 1200px;
@@ -115,8 +139,35 @@
             word-break: keep-all;
             word-wrap: break-word;
             overflow-wrap: break-word;
+            height: 130px;
         }
 
+
+        .row0 { clear: both; height: 1500px; width: 1200px;}
+        .container0 { clear: both; height: 250px; margin: 50px auto;}
+        .container0:first-child {padding-top: 50px;}
+        .container0:last-child {padding-bottom: 50px;}
+        .container0 .img10 {  float: left; }
+        .container0 .txt10 { float: right; width: 700px; padding-top: 30px; }
+        .container0 .txt10 p { vertical-align: middle;}
+        .img1_tit0 { margin-bottom: 20px; font-weight: bold; font-size: large;
+        }
+        .info_list0 {
+            float: left;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+        }
+        .info_wrap0 {font-size: 15px;
+            line-height: 28px;
+            letter-spacing: -0.3px;}
+        .info_wrap0 .info_sub_title0 {
+            font-weight: bold;
+        }
+        .info_wrap0 .info_sub_text0 {
+            word-break: keep-all;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
 
     </style>
 
@@ -150,13 +201,15 @@
                 </div>
                 <div class="row">
                     <section class="container">
-                        <h2>WEEK CAN DO IT!</h2>
+                        <span>W</span>
+                        <span>EE</span>
+                        <span>K CAN DO IT!</span>
                     </section>
-                    <section class="container">
+                    <section>
                         <div class="img1">
                             <p class="img1_tit">Week은 교육 서비스에
                                 최적화된 교육·출판 전문 기업입니다.</p>
-                            <img src="images/pics11.jpg" alt="" class="img2"/>
+                            <img src="/weekcrew/images/img_company.jpg" alt="회사 소개" />
                         </div>
                         <div class="txt1">
                             <div class="info_list">
@@ -174,28 +227,35 @@
                         </div>
                     </section>
                     <section class="container">
-                        <div class="img1">
-                            <p class="img1_tit" id="scroll">WEEK STORY</p>
-                            <img src="images/pics12.jpg" alt="" class="img2"/>
-                        </div>
-                        <div class="txt1">
-                            <div class="info_list">
-                                <dl class="info_wrap">
-                                    <dt class="info_sub_title">경조사 지원</dt>
-                                    <dd class="info_sub_text">결혼, 환갑, 출산, 장례 등 중요한 경조사에 축하와 조의를 전하고 휴가 및 경조비 지원</dd>
-                                </dl>
-                                <dl class="info_wrap">
-                                    <dt class="info_sub_title">육아휴직</dt>
-                                    <dd class="info_sub_text">법정 육아휴직 1년 외 추가로 1년 더, 총 2년까지 신청할 수 있는 제도
-                                    </dd>
-                                </dl>
-                                <dl class="info_wrap">
-                                    <dt class="info_sub_title">가족돌봄 휴가</dt>
-                                    <dd class="info_sub_text">가족의 간호 및 돌봄이 필요한 경우 최대 90일까지 사용할 수 있는 무급 휴가</dd>
-                                </dl>
-                            </div>
+                        <div id="scroll" class="img2">
+                            <span id="scroll2">WEEK STORY</span>
                         </div>
                     </section>
+                    <div class="row0">
+                        <section class="container0">
+                            <div class="img10">
+                                <p class="img10_tit">Time & Refresh</p>
+                                <img src="/weekcrew/images/img_refresh.jpg" alt="" class="img20"/>
+                            </div>
+                            <div class="txt10">
+                                <div class="info_list0">
+                                    <dl class="info_wrap0">
+                                        <dt class="info_sub_title0">자기돌봄 휴직</dt>
+                                        <dd class="info_sub_text0">3년 이상 근속 시 자기개발이나 휴식을 위해 최대 6개월까지 무급 휴직 가능</dd>
+                                    </dl>
+                                    <dl class="info_wrap0">
+                                        <dt class="info_sub_title0">리프레시 플러스 휴가</dt>
+                                        <dd class="info_sub_text0">2년 근속 시 재충전을 위해 연차 외에 추가적으로 15일의 유급휴가 부여</dd>
+                                    </dl>
+                                    <dl class="info_wrap0">
+                                        <dt class="info_sub_title0">워케이션</dt>
+                                        <dd class="info_sub_text0">익숙한 공간을 떠나 새로운 공간에서의 몰입과 리프레시를 위해
+                                            최대 7일간 업무 공간 및 숙박(1인 1실), 식사 등 지원</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
                 </div>
             </div>
             <script>
