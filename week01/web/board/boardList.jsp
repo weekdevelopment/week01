@@ -52,9 +52,10 @@
     <link rel="stylesheet" href="../hd.css">
     <style>
         /* 본문 영역 스타일 */
+        .wrap { background-color: #fffcf2; }
         .contents { clear:both; min-height:100vh;
             background-image: url("../images/bg_visual_overview.jpg");
-            background-repeat: no-repeat; background-position:center -250px; }
+            background-repeat: no-repeat; background-position:center -250px; height: 1400px; }
         .contents::after { content:""; clear:both; display:block; width:100%; }
 
         .page { clear:both; width: 100vw; height: 100vh; position:relative; }
@@ -73,10 +74,10 @@
         .tb1 { width:800px; margin:50px auto; }
         .tb1 th { line-height:32px; padding-top:8px; padding-bottom:8px;
             border-top:1px solid #333; border-bottom:1px solid #333;
-            background-color:deepskyblue; color:#fff; }
-        .tb1 td {line-height:32px; padding-top:8px; padding-bottom:8px;
-            border-bottom:1px solid #333;
-            padding-left: 14px; border-top:1px solid #333; }
+            background-color: #f5be8b; color:#fff; }
+        .tb1 td {line-height:32px;
+            border-bottom:1px solid #fff;
+            border-top:1px solid #fff; }
 
         .tb1 .item1 { width:10%; text-align: center; }
         .tb1 .item2 { width:65%; }
@@ -90,6 +91,12 @@
             line-height: 48px; background-color: #333; color:#fff; font-size: 18px; }
         .inbtn:first-child { float:left; }
         .inbtn:last-child { float:right; }
+
+        .dataTables_wrapper {
+            position: relative;
+            clear: both;
+            margin-top: 90px;
+        }
     </style>
 
     <link rel="stylesheet" href="../ft.css">

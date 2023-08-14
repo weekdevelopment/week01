@@ -21,7 +21,7 @@
     <style>
         /* 본문 영역 스타일 */
         .wrap { background-color: #fffcf2;}
-        .contents { clear:both; height:1500px;
+        .contents { clear:both; height:1700px;
             background-image: url("../images/bg_visual_overview.jpg");
             background-repeat: no-repeat; background-position:center -250px; }
         .contents::after { content:""; clear:both; display:block; width:100%; }
@@ -29,7 +29,7 @@
         .page { clear:both; width: 100vw; height: 100vh; position:relative; }
         .page::after { content:""; display:block; width: 100%; clear:both; }
 
-        .page_wrap { clear:both; width: 1200px; height: auto; margin:0 auto; }
+        .page_wrap { clear:both; width: 1500px; height: auto; margin:0 auto; }
         .page_tit { font-size:48px; text-align: center; padding-top:1em; color:#fff;
             padding-bottom: 2.4rem; }
 
@@ -85,14 +85,14 @@
             color: #cdcdcd;
             background: #fff;
         }
-        .inner { clear: both; margin: 30px 20%; overflow: hidden; }
+        .inner { clear: both; margin: 30px 18%; overflow: hidden; }
         .inner > div {
-            float: left; margin-left: 20px;
+            float: left; margin-left: 50px;
         }
         .img-area > p {
-            font-size: 20px; font-weight: bold; padding: 20px;
+            font-size: 20px; font-weight: bold; padding: 20px 20px 20px 7px;
         }
-        .inner span { margin: 0 110px; line-height: 100px;        }
+        .inner span { margin: 0 240px; line-height: 100px;   font-weight: bold;     }
 
     </style>
 
@@ -130,20 +130,20 @@
                 <div class="inner">
                     <span>우리 아이들의 행복한 내일을 위해 Week가 끊임 없는 노력을 하겠습니다.</span>
                         <div class="img-area">
-                            <img src="/images/img_social_main01.jpg" alt="천재교육 도서 기증 &amp; 학습봉사 발대식">
-                            <p>도서 기증</p>
+                            <img src="/weekcrew/images/img_contribution1.jpg" alt="week 도서 기증">
+                            <p>✅ 해외아동 도서 및 교육 지원</p>
                         </div>
                         <div class="img-area">
-                            <img src="/images/img_social_main02.jpg" alt="천재교육 도서 기증 &amp; 학습봉사 발대식">
-                            <p>도서 기증</p>
+                            <img src="/weekcrew/images/img_contribution4.jpg" alt="천재교육 도서 기증 &amp; 학습봉사 발대식">
+                            <p>✅ Week 도서 기증</p>
                         </div>
                         <div class="img-area">
-                            <img src="/images/img_social_main03.jpg" alt="">
-                            <p>도서 기증</p>
+                            <img src="/weekcrew/images/img_contribution2.jpg" alt="">
+                            <p>✅ 대한교육협회 지원</p>
                         </div>
                         <div class="img-area">
-                            <img src="/images/img_social_main04.jpg" alt="">
-                            <p>도서 기증</p>
+                            <img src="/weekcrew/images/img_contribution3.jpg" alt="">
+                            <p>✅ 지역사회 교육 후원</p>
                         </div>
                 </div>
             </div>
