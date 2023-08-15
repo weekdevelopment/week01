@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a993456-d446-4334-b5c8-4825f9deaba0" name="Changes" comment="add ........ㅠㅠ" />
+    <list default="true" id="8a993456-d446-4334-b5c8-4825f9deaba0" name="Changes" comment="Add image" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +12,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "doyounii"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="92dc485d-c11a-4716-b765-fc21a25de56b" />
+        <option name="url" value="https://github.com/weekdevelopment/week01.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -28,7 +42,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "soyoon",
-    "last_opened_file_path": "D:/chunjae/weekcandoit/week01/week01",
+    "last_opened_file_path": "D:/chunjae/jsp/jsp_servlet/pro01/pro01",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -48,6 +62,7 @@
       <workItem from="1691949375588" duration="63000" />
       <workItem from="1692026261345" duration="835000" />
       <workItem from="1692035615822" duration="115000" />
+      <workItem from="1692092743389" duration="1178000" />
     </task>
     <task id="LOCAL-00001" summary="add ........ㅠㅠ">
       <option name="closed" value="true" />
@@ -57,7 +72,39 @@
       <option name="project" value="LOCAL" />
       <updated>1691949406370</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add admin">
+      <option name="closed" value="true" />
+      <created>1692092786797</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1692092786797</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Modify style">
+      <option name="closed" value="true" />
+      <created>1692092808731</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1692092808731</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add image">
+      <option name="closed" value="true" />
+      <created>1692092834140</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1692092834140</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Add image">
+      <option name="closed" value="true" />
+      <created>1692092856123</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1692092856123</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -65,6 +112,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add ........ㅠㅠ" />
-    <option name="LAST_COMMIT_MESSAGE" value="add ........ㅠㅠ" />
+    <MESSAGE value="Add admin" />
+    <MESSAGE value="Modify style" />
+    <MESSAGE value="Add image" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add image" />
   </component>
 </project>
