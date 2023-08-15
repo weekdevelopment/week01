@@ -56,7 +56,7 @@
                 <ul class="sub">
                     <li><a href="/board/boardList.jsp">자주하는 질문</a></li>
                     <li><a href="/qna/qnaList.jsp">1:1 문의</a></li>
-                    <li><a href="promotion.html#news">자료실</a></li>
+                    <li><a href="/archive/archiveList.jsp">자료실</a></li>
                 </ul>
             </li>
             <li class="item5">
