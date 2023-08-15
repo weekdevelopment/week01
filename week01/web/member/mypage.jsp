@@ -80,16 +80,14 @@
             width:1200px; margin: 0 auto; text-align: right; color:#fff;
             padding-top: 28px; padding-bottom: 28px; }
         .breadcrumb a { color:#fff; }
-        .frm { clear:both; width:1200px; margin:0 auto; padding-top: 80px; }
-
         .tb1 { width:500px; margin:100px auto; }
         .tb1 th { width: 100px; background-color: #f5be8b; height: 48px; margin-top: 50px; margin-bottom: 50px; color:#fff;}
-        .tb1 td {  width: 300px;  line-height: 48px; padding-top:24px; padding-bottom:24px; padding-left: 20px; color: #f5be8b;}
+        .tb1 td {  width: 300px;  line-height: 48px; padding-top:24px; padding-bottom:24px; padding-left: 20px; color: #f5be8b;
+            max-width: 200px;
+            overflow: hidden;}
         .tb1 .th1:first-child {border-radius: 50% 0 0 0;}
         .tb1 .th2 {border-radius: 0 0 0 50%;}
 
-        .indata { display:inline-block; width: 500px; height: 48px; line-height: 48px;
-            text-indent:14px; font-size:18px; }
         .inbtn { display:block;  border-radius:100px;
             min-width:140px; padding-left: 24px; padding-right: 24px; text-align: center;
             line-height: 48px; background-color: #f5be8b; color:#fff; font-size: 18px; }

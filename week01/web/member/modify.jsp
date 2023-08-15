@@ -92,7 +92,8 @@
         .tb1 td { width:500px; line-height: 48px; padding-top:24px; padding-bottom:24px; }
 
         .indata { display:inline-block; width: 500px; height: 48px; line-height: 48px;
-            text-indent:14px; font-size:18px; }
+        .indata { display:inline-block; width: 500px; height: 48px; line-height: 48px;
+            text-indent:14px; font-size:18px; max-width: 500px;}
         .inbtn { display:block;  border-radius:100px;
             min-width:140px; padding-left: 24px; padding-right: 24px; text-align: center;
             line-height: 48px; background-color: #f5be8b; color:#fff; font-size: 18px; border-color: #f5be8b;}
@@ -130,7 +131,7 @@
                             서로 다르면, re_pw로 비밀번호를 변경할 것임
                             -->
                             <td>
-                                <input type="text" value="<%=pw2 %>" name="re_pw" id="re_pw" class="indata" required/>
+                                <input type="text" value="<%=pw2 %>" name="re_pw" id="re_pw" class="indata" readonly required/>
                                 <input type="hidden" value="<%=pw2 %>" name="pw2" id="pw2" class="indata"/>
                                 <input type="hidden" value="<%=pw %>" name="pw" id="pw" class="indata"/>
                             </td>

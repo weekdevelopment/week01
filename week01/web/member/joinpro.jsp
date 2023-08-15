@@ -1,6 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
 <%@ page import="java.sql.*" %>
 <%@ page import="com.week.db.*" %>
+<%@ page import="com.week.util.*" %>
+<%@ page import="java.security.*" %>
 <%
     request.setCharacterEncoding("UTF-8");
     response.setContentType("text/html;charset=UTF-8");
@@ -8,6 +10,7 @@
 
     String id = request.getParameter("id");
     String pw = request.getParameter("pw");
+    pw = AES256.sha256(pw);
     String name = request.getParameter("name");
     String email = request.getParameter("email");
     String tel = request.getParameter("tel");

@@ -98,7 +98,7 @@
             border-top:1px solid #f5be8b; }
 
         .tb1 .item1 { width:10%; text-align: center; }
-        .tb1 .item2 { width:10%; text-align: center; }
+        .tb1 .item2 { width:10%; text-align: center; max-width: 50px; overflow: hidden;}
         .tb1 .item3 { width:10%; text-align: center; }
         .tb1 .item4 { width:20%; text-align: center; }
         .tb1 .item5 { width:20%; text-align: center; }
@@ -175,7 +175,7 @@
                             %>
                             <tr>
                                 <td class="item1"><%=m.getId() %></td>
-                                <td><%=m.getPw().substring(0,2) %>
+                                <td class="item2"><%=m.getPw().substring(0,2) %>
                                     <%
                                         for (int i=0; i<m.getPw().length()-2; i++) {
                                             out.print("*");
