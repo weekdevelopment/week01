@@ -128,7 +128,7 @@
 
 /*.ft_link li { line-height: 48px; }*/
 #sel {
-    height: 34px;
+    height: 40px;
     width: 200px;
 }
 
@@ -176,5 +176,5 @@
     position: fixed;
     right: 60px;
     bottom: 30px;
-    border-radius: 26px
-};
+    border-radius: 26px;
+}

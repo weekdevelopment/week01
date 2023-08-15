@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
+</div>
 <footer class="ft" id="ft">
     <div class="ft_wrap">
         <nav class="ft_link">
