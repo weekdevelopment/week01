@@ -2,10 +2,11 @@
 <%@ page import="java.sql.*" %>
 <%@ page import="java.util.*" %>
 <%@ page import="com.week.db.*" %>
-<%@ page import="com.week.dto.*" %>
+<%@ page import="com.week.util.*" %>
 <%
     String id = request.getParameter("id");
     String pw = request.getParameter("pw");
+    pw=AES256.sha256(pw);
 
     Connection conn = null;
     PreparedStatement pstmt = null;

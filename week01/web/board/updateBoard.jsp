@@ -51,6 +51,7 @@
     <link rel="stylesheet" href="../hd.css">
     <style>
         /* 본문 영역 스타일 */
+        .wrap { background-color: #fffcf2; }
         .contents { clear:both; min-height:100vh;
             background-image: url("../images/bg_visual_overview.jpg");
             background-repeat: no-repeat; background-position:center -250px; }
@@ -63,26 +64,26 @@
         .page_tit { font-size:48px; text-align: center; padding-top:1em; color:#fff;
             padding-bottom: 2.4rem; }
 
-        .breadcrumb { clear:both;
+        .breadscrumb { clear:both;
             width:1200px; margin: 0 auto; text-align: right; color:#fff;
             padding-top: 28px; padding-bottom: 28px; }
-        .breadcrumb a { color:#fff; }
+        .breadscrumb a { color:#fff; }
         .frm { clear:both; width:1200px; margin:0 auto; padding-top: 80px; }
 
         .tb1 { width:800px; margin:50px auto; }
         .tb1 th { line-height:32px; padding-top:8px; padding-bottom:8px;
-            border-top:1px solid #333; border-bottom:1px solid #333;
-            background-color:deepskyblue; color:#fff; }
+            border-top:1px solid #f5be8b; border-bottom:1px solid #f5be8b;
+            background-color:#f5be8b; color:#fff; }
         .tb1 td {line-height:32px; padding-top:8px; padding-bottom:8px;
-            border-bottom:1px solid #333;
-            padding-left: 14px; border-top:1px solid #333; }
+            border-bottom:1px solid #f5be8b;
+            padding-left: 14px; border-top:1px solid #f5be8b; }
 
         .indata { display:inline-block; width:300px; height: 48px; line-height: 48px;
             text-indent:14px; font-size:18px; }
         .inbtn { display:block;  border-radius:100px;
             min-width:100px; padding-left: 24px; padding-right: 24px; text-align: center;
-            line-height: 48px; background-color: #333; color:#fff; font-size: 18px;
-            float:left; margin-right: 20px; }
+            line-height: 48px; background-color: #f5be8b; color:#fff; font-size: 18px;
+            float:left; margin-right: 20px; border-color: #f5be8b; }
         .inbtn:last-child { float:right; }
     </style>
 

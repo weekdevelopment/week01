@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="../hd.css">
     <style>
         /* 본문 영역 스타일 */
-        .wrap {height: 460px;}
+        .wrap { background-color: #fffcf2; min-height: 100vh; }
         .contents { clear:both; min-height:460px;}
         .contents::after { content:""; clear:both; display:block; width:100%; }
 
@@ -28,7 +28,7 @@
         .page::after { content:""; display:block; width: 100%; clear:both; }
 
         .page_wrap { clear:both; width: 1200px; height: 460px; margin:0 auto; }
-        .page_tit { font-size:48px; text-align: center; padding-top:160px; color:#f5be8b;
+        .page_tit { font-size:48px; text-align: center; padding-top:260px; color:#f5be8b;
             padding-bottom: 2.4rem; }
 
         .breadcrumb { clear:both;
@@ -63,9 +63,6 @@
 </head>
 <body>
 <div class="wrap">
-    <header class="hd" id="hd">
-        <%@ include file="../header.jsp"%>
-    </header>
     <div class="contents" id="contents">
         <section class="page" id="page1">
             <div class="page_wrap">
@@ -76,9 +73,6 @@
             </div>
         </section>
     </div>
-    <footer class="ft" id="ft">
-        <%@ include file="../footer.jsp" %>
-    </footer>
 </div>
 </body>
 </html>

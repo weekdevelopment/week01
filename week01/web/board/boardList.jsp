@@ -69,15 +69,13 @@
             width:1200px; margin: 0 auto; text-align: right; color:#fff;
             padding-top: 28px; padding-bottom: 28px; }
         .breadcrumb a { color:#fff; }
-        .frm { clear:both; width:1200px; margin:0 auto; padding-top: 80px; }
-
         .tb1 { width:800px; margin:50px auto; }
         .tb1 th { line-height:32px; padding-top:8px; padding-bottom:8px;
-            border-top:1px solid #333; border-bottom:1px solid #333;
+            border-top:1px solid #f5be8b; border-bottom:1px solid #f5be8b;
             background-color: #f5be8b; color:#fff; }
         .tb1 td {line-height:32px;
-            border-bottom:1px solid #fff;
-            border-top:1px solid #fff; }
+            border-bottom:1px solid #f5be8b;
+            border-top:1px solid #f5be8b; }
 
         .tb1 .item1 { width:10%; text-align: center; }
         .tb1 .item2 { width:65%; }
@@ -88,7 +86,7 @@
             text-indent:14px; font-size:18px; }
         .inbtn { display:block;  border-radius:100px;
             min-width:140px; padding-left: 24px; padding-right: 24px; text-align: center;
-            line-height: 48px; background-color: #333; color:#fff; font-size: 18px; }
+            line-height: 48px; background-color: #f5be8b; color:#fff; font-size: 18px; }
         .inbtn:first-child { float:left; }
         .inbtn:last-child { float:right; }
 
@@ -148,7 +146,7 @@
                                 <a href="/board/getBoard.jsp?bno=<%=bd.getBno() %>"><%=bd.getTitle() %></a>
                                 <% } %>
                             </td>
-                            <td class="item3"><%=bd.getResdate() %></td>
+                            <td class="item3"><%=date %></td>
                             <td class="item4"><%=bd.getCnt() %></td>
                         </tr>
                         <%
@@ -170,7 +168,7 @@
                                 <%
                                     if (sid !=null && sid.equals("admin")) {
                                 %>
-                                <a href="/board/addBoard.jsp">글 쓰기</a>
+                                <a class="inbtn" href="/board/addBoard.jsp">글 쓰기</a>
                                 <%
                                 }
                                 %>

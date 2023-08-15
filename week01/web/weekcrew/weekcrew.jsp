@@ -21,6 +21,7 @@
 
     <style>
         /* 본문 영역 스타일 */
+        .wrap { background-color: #fffcf2; }
         .contents { clear:both; min-height:100vh;
             background-image: url("../images/bg_visual_overview.jpg");
             background-repeat: no-repeat; background-position:center -250px; height: 1550px;}
@@ -84,7 +85,7 @@
         </div>
         <section class="page" id="page1">
             <div class="page_wrap">
-                <h2 class="page_tit">윜크루가 되면</h2>
+                <h2 class="page_tit">윜크루 되면</h2>
                 <hr>
                         <div class="row">
                             <section class="container">
