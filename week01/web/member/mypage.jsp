@@ -63,12 +63,13 @@
     <link rel="stylesheet" href="../hd.css">
     <style>
         /* 본문 영역 스타일 */
-        .contents { clear:both; min-height:100vh;
+        .wrap { background-color: #fffcf2; }
+        .contents { clear:both; min-height:1200px;
             background-image: url("../images/bg_visual_overview.jpg");
             background-repeat: no-repeat; background-position:center -250px; }
         .contents::after { content:""; clear:both; display:block; width:100%; }
 
-        .page { clear:both; width: 100vw; height: 100vh; position:relative; }
+        .page { clear:both; width: 100vw; height: 1000px; position:relative; }
         .page::after { content:""; display:block; width: 100%; clear:both; }
 
         .page_wrap { clear:both; width: 1200px; height: auto; margin:0 auto; }
@@ -81,15 +82,17 @@
         .breadcrumb a { color:#fff; }
         .frm { clear:both; width:1200px; margin:0 auto; padding-top: 80px; }
 
-        .tb1 { width:500px; margin:0 auto; }
-        .tb1 th { width: 100px; background-color: #9fffd5; height: 48px; margin-top: 50px; margin-bottom: 50px}
-        .tb1 td {  width: 300px;  line-height: 48px; padding-top:24px; padding-bottom:24px; padding-left: 20px;}
+        .tb1 { width:500px; margin:100px auto; }
+        .tb1 th { width: 100px; background-color: #f5be8b; height: 48px; margin-top: 50px; margin-bottom: 50px; color:#fff;}
+        .tb1 td {  width: 300px;  line-height: 48px; padding-top:24px; padding-bottom:24px; padding-left: 20px; color: #f5be8b;}
+        .tb1 .th1:first-child {border-radius: 50% 0 0 0;}
+        .tb1 .th2 {border-radius: 0 0 0 50%;}
 
         .indata { display:inline-block; width: 500px; height: 48px; line-height: 48px;
             text-indent:14px; font-size:18px; }
         .inbtn { display:block;  border-radius:100px;
             min-width:140px; padding-left: 24px; padding-right: 24px; text-align: center;
-            line-height: 48px; background-color: #333; color:#fff; font-size: 18px; }
+            line-height: 48px; background-color: #f5be8b; color:#fff; font-size: 18px; }
         .inbtn:first-child { float:left; }
         .inbtn:last-child { float:right; }
     </style>
@@ -112,7 +115,7 @@
                     <table class="tb1">
                         <tbody>
                         <tr>
-                            <th>아이디</th>
+                            <th class="th1">아이디</th>
                             <td><%=mem.getId() %></td>
                         </tr>
                         <tr>
@@ -142,7 +145,7 @@
                             <td><%=mem.getRegdate() %></td>
                         </tr>
                         <tr>
-                            <th>포인트</th>
+                            <th class="th2">포인트</th>
                             <td><%=mem.getPoint() %></td>
                         </tr>
                         <tr>

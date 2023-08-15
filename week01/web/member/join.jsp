@@ -21,7 +21,8 @@
     <link rel="stylesheet" href="../hd.css">
     <style>
         /* 본문 영역 스타일 */
-        .contents { clear:both; min-height:100vh;
+        .wrap { background-color: #fffcf2; }
+        .contents { clear:both; min-height: 850px;
             background-image: url("../images/bg_visual_overview.jpg");
             background-repeat: no-repeat; background-position:center -250px; }
         .contents::after { content:""; clear:both; display:block; width:100%; }
@@ -37,21 +38,18 @@
             width:1200px; margin: 0 auto; text-align: right; color:#fff;
             padding-top: 28px; padding-bottom: 28px; }
         .breadcrumb a { color:#fff; }
-        .frm { clear:both; width:1200px; margin:0 auto; padding-top: 80px; }
-
         .tb1 { width:500px; margin:50px auto; }
         .tb1 th { width:180px; line-height:32px; padding-top:8px; padding-bottom:8px;
-        border-top:1px solid #333; border-bottom:1px solid #333;
-            background-color:deepskyblue; color:#fff; }
+            background-color:#f5be8b; color:#fff; }
         .tb1 td { width:310px; line-height:32px; padding-top:8px; padding-bottom:8px;
-            border-bottom:1px solid #333;
-            padding-left: 14px; border-top:1px solid #333; }
-
+            padding-left: 14px; }
+        .tb1 .th1 {border-radius: 50px 0 0 0;}
+        .tb1 .th2 {border-radius: 0 0 0 50px;}
         .indata { display:inline-block; width:300px; height: 48px; line-height: 48px;
             text-indent:14px; font-size:18px; }
         .inbtn { display:block;  border-radius:100px;
             min-width:140px; padding-left: 24px; padding-right: 24px; text-align: center;
-            line-height: 48px; background-color: #333; color:#fff; font-size: 18px; }
+            line-height: 48px; background-color: #f5be8b; color:#fff; font-size: 18px; border: #f5be8b;}
         .inbtn:first-child { float:left; }
         .inbtn:last-child { float:right; }
     </style>
@@ -75,7 +73,7 @@
                     <table class="tb1">
                         <tbody>
                         <tr>
-                            <th>아이디</th>
+                            <th class="th1">아이디</th>
                             <td>
                                 <input type="text" name="id" id="id" class="indata" required/>
                                 <button type="button" id="ck_btn" onclick="idcheck()">아이디 중복 체크</button>
@@ -103,7 +101,7 @@
                             <td><input type="tel" name="tel" id="tel" class="indata" required></td>
                         </tr>
                         <tr>
-                            <th>이메일</th>
+                            <th class="th2">이메일</th>
                             <td><input type="email" name="email" id="email" class="indata" required></td>
                         </tr>
                         <tr>

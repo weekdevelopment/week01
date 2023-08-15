@@ -58,7 +58,8 @@
     <link rel="stylesheet" href="../hd.css">
     <style>
         /* 본문 영역 스타일 */
-        .contents { clear:both; min-height:100vh;
+        .wrap { background-color: #fffcf2; }
+        .contents { clear:both; min-height:800px;
             background-image: url("../images/bg_visual_overview.jpg");
             background-repeat: no-repeat; background-position:center -250px; }
         .contents::after { content:""; clear:both; display:block; width:100%; }
@@ -78,17 +79,17 @@
 
         .tb1 { width:800px; margin:50px auto; }
         .tb1 th { line-height:32px; padding-top:8px; padding-bottom:8px;
-            border-top:1px solid #333; border-bottom:1px solid #333;
-            background-color:deepskyblue; color:#fff; }
+            border-top:1px solid #fff; border-bottom:1px solid #fff;
+            background-color: #f5be8b; color:#fff; }
         .tb1 td {line-height:32px; padding-top:8px; padding-bottom:8px;
-            border-bottom:1px solid #333;
-            padding-left: 14px; border-top:1px solid #333; }
+            border-bottom:1px solid #fff;
+            padding-left: 14px; border-top:1px solid #fff; }
 
         .indata { display:inline-block; width:300px; height: 48px; line-height: 48px;
             text-indent:14px; font-size:18px; }
         .inbtn { display:block;  border-radius:100px;
             min-width:100px; padding-left: 24px; padding-right: 24px; text-align: center;
-            line-height: 48px; background-color: #333; color:#fff; font-size: 18px;
+            line-height: 48px; background-color: #f5be8b; color:#fff; font-size: 18px;
             float:left; margin-right: 20px; }
         .inbtn:last-child { float:right; }
     </style>

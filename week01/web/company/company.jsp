@@ -23,9 +23,9 @@
     <style>
         /* 본문 영역 스타일 */
         .wrap { background-color: #fffcf2;}
-        .contents { clear:both; height:1700px;
+        .contents { clear:both; height:2450px;
             background-image: url("../images/bg_visual_overview.jpg");
-            background-repeat: no-repeat; background-position:center -250px; }
+            background-repeat: no-repeat; background-position:center -250px; padding-bottom: 500px;}
         .contents::after { content:""; clear:both; display:block; width:100%; }
 
         .page { clear:both; width: 100vw; position:relative; }
@@ -54,8 +54,8 @@
             height: 650px;
         }
         .img2 {
-            padding: 50px 100px;
-            width: 1000px;
+            padding: 50px 430px;
+            width: 400px;
             height: 150px;
         }
         .img1_tit { margin-bottom: 40px; font-weight: bold; font-size: large; text-align: center;
@@ -69,12 +69,6 @@
         container:last-child {
             clear: both;
         }
-        #scroll2 {font-size: 48px;
-            text-align: center;
-            color: #000000;
-            font-weight: 900;
-            /* margin-top: 150px; */
-            padding-left: 393px;}
         .inner {
             margin: 30px auto;
             width: 1200px;
@@ -143,22 +137,31 @@
         }
 
 
-        .row0 { clear: both; height: 1500px; width: 1200px;}
-        .container0 { clear: both; height: 250px; margin: 50px auto;}
-        .container0:first-child {padding-top: 50px;}
+        .row0 { clear: both;     min-height: 1435px; width: 1200px;}
+        .container0 { clear: both; height: 400px; margin: 50px auto;}
+        .container0:first-child {padding-top: 35px;}
         .container0:last-child {padding-bottom: 50px;}
-        .container0 .img10 {  float: left; }
-        .container0 .txt10 { float: right; width: 700px; padding-top: 30px; }
+        .container0 .img10 {  float: left; padding-left: 103px; }
+        .container0 .txt10 { float: right; width: 379px; padding: 100px; }
         .container0 .txt10 p { vertical-align: middle;}
-        .img1_tit0 { margin-bottom: 20px; font-weight: bold; font-size: large;
+        .img10_tit { margin-bottom: 20px; font-weight: bold; font-size: large;
         }
+        .container0 span {
+            font-size:48px; text-align: center;  color: #000000; font-weight: 900; padding-left: 393px;
+        }
+        #scroll2 {font-size: 48px;
+            text-align: center;
+            color: #ffde34;
+            font-weight: 900;
+            /* margin-top: 150px; */
+            }
         .info_list0 {
             float: left;
             box-sizing: border-box;
             -webkit-box-sizing: border-box;
         }
         .info_wrap0 {font-size: 15px;
-            line-height: 28px;
+            line-height: 40px;
             letter-spacing: -0.3px;}
         .info_wrap0 .info_sub_title0 {
             font-weight: bold;
@@ -215,11 +218,11 @@
                             <div class="info_list">
                                 <dl class="info_wrap">
                                     <dd class="info_sub_text">
-                                        Week은 교과서와 학습 교재를 출간하는 교육·출판 전문 기업입니다.
-                                        제5차 교육과정부터 국정·검정·인정 교과용 도서를 개발, 발행하고
-                                        연간 3,700여 종에 이르는 유아동·초·중·고등 학습 교재를 발간하고 있습니다.
+                                        Week은 유아부터 고등까지 모든 연령대의 교육 콘텐츠 전문 기업입니다.
+                                        10년간 교육 콘텐츠업계 매출 1위를 차지하고 있으며,
+                                        연간 5,000여 종에 이르는 유아동·초·중·고등 학습 교재를 발간하고 있습니다.
 
-                                        또한 미래 인재 육성을 위한 학원 프랜차이즈 사업과
+                                        또한 미래 인재 육성을 위한 AI 교육 컨텐츠 개발과 1,000여 종의 동강상 강의를 제공합니다.
                                         4차 산업혁명 시대에 발맞춘 스마트러닝, 에듀테크 사업 등을 통해
                                         대한민국 교육 트렌드를 주도하고 있습니다.</dd>
                                 </dl>
@@ -228,29 +231,59 @@
                     </section>
                     <section class="container">
                         <div id="scroll" class="img2">
-                            <span id="scroll2">WEEK STORY</span>
+                            <span>W</span>
+                            <span id="scroll2">EE</span>
+                            <span>K STORY</span>
                         </div>
                     </section>
                     <div class="row0">
                         <section class="container0">
                             <div class="img10">
-                                <p class="img10_tit">Time & Refresh</p>
-                                <img src="/weekcrew/images/img_refresh.jpg" alt="" class="img20"/>
+                                <p class="img10_tit"> 1️⃣ AI 학습 관련 연구 개발</p>
+                                <img src="/weekcrew/images/img_ai.jpg" alt="" class="img20"/>
                             </div>
                             <div class="txt10">
                                 <div class="info_list0">
                                     <dl class="info_wrap0">
-                                        <dt class="info_sub_title0">자기돌봄 휴직</dt>
-                                        <dd class="info_sub_text0">3년 이상 근속 시 자기개발이나 휴식을 위해 최대 6개월까지 무급 휴직 가능</dd>
+                                        <dt class="info_sub_title0"> ✅ AI 학습 지완 관련 연구 및 자료 개발</dt>
                                     </dl>
                                     <dl class="info_wrap0">
-                                        <dt class="info_sub_title0">리프레시 플러스 휴가</dt>
-                                        <dd class="info_sub_text0">2년 근속 시 재충전을 위해 연차 외에 추가적으로 15일의 유급휴가 부여</dd>
+                                        <dt class="info_sub_title0"> ✅ 실용 중심의 학습 평가 지원</dt>
                                     </dl>
                                     <dl class="info_wrap0">
-                                        <dt class="info_sub_title0">워케이션</dt>
-                                        <dd class="info_sub_text0">익숙한 공간을 떠나 새로운 공간에서의 몰입과 리프레시를 위해
-                                            최대 7일간 업무 공간 및 숙박(1인 1실), 식사 등 지원</dd>
+                                        <dt class="info_sub_title0"> ✅ 특정 분야 반복학습을 위한 데이터 분석 </dt>
+                                    </dl>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="container0">
+                            <div class="img10">
+                                <p class="img10_tit"> 2️⃣ 교과용 도서 연구 및 검정</p>
+                                <img src="/weekcrew/images/img_bookd.jpg" alt="" class="img20"/>
+                            </div>
+                            <div class="txt10">
+                                <div class="info_list0">
+                                    <dl class="info_wrap0">
+                                        <dt class="info_sub_title0"> ✅ 초.중.고 교과과정 도서 및 참고서 연구 </dt>
+                                    </dl>
+                                    <dl class="info_wrap0">
+                                        <dt class="info_sub_title0"> ✅ 초.중.고 교과과정 도서 및 참고서 검정 업무</dt>
+                                    </dl>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="container0">
+                            <div class="img10">
+                                <p class="img10_tit"> 3️⃣ 국가고사 최신경향 관리 </p>
+                                <img src="/weekcrew/images/img_exam.jpg" alt="" class="img20"/>
+                            </div>
+                            <div class="txt10">
+                                <div class="info_list0">
+                                    <dl class="info_wrap0">
+                                        <dt class="info_sub_title0"> ✅ 각종 국가고사 최신경향 연구 및 관리</dt>
+                                    </dl>
+                                    <dl class="info_wrap0">
+                                        <dt class="info_sub_title0"> ✅ 시.도교육청 연합학력평가 연구 및 결과 분석</dt>
                                     </dl>
                                 </div>
                             </div>
