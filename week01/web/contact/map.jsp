@@ -21,7 +21,7 @@
         /* 본문 영역 스타일 */
         .contents { clear:both; min-height:100vh;
             background-image: url("../images/bg_visual_overview.jpg");
-            background-repeat: no-repeat; background-position:center -250px; }
+            background-repeat: no-repeat; background-position:center -250px; height: 910px; }
         .contents::after { content:""; clear:both; display:block; width:100%; }
 
         .page { clear:both; width: 100vw; height: 100vh; position:relative; }
@@ -38,10 +38,27 @@
 
     </style>
     <link rel="stylesheet" href="../ft.css">
-
     <link rel="stylesheet" type="text/css" href="http://s1.daumcdn.net/svc/attach/U03/cssjs/mapapidoc/1421136453605/service.min.css">
     <style>
         body { background:white; }
+        #kk-map {
+            position: relative;
+            bottom: 10px;
+            left: 860px;
+            margin: 20px;
+        }
+        .mapBtn {
+            display: inline-block;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .mapBtn:hover {
+            background-color: #0056b3;
+        }
     </style>
     <script type="text/javascript" src="http://dmaps.daum.net/map_js_init/v3.js"></script>
     <script type="text/javascript" src="http://s1.daumcdn.net/svc/original/U03/cssjs/jquery/jquery-1.11.0.js"></script>
@@ -54,7 +71,7 @@
     </header>
     <div class="contents" id="contents">
         <div class="breadcrumb">
-            <p><a href="">HOME</a> &gt; <span>오시는길</span></p>
+            <p><a href="/">HOME</a> &gt; <span>오시는길</span></p>
         </div>
         <section class="page" id="page1">
             <div class="page_wrap">
@@ -95,12 +112,15 @@
                     <script type="text/javascript" src="http://s1.daumcdn.net/svc/attach/U03/cssjs/mapapidoc/1421136453605/service.min.js">
                     </script>
                 </div>
+                <div id="kk-map">
+                    <a href="https://map.kakao.com/?urlX=475439&urlY=1104677&urlLevel=3&itemId=8419265&q=%EC%B2%9C%EC%9E%ACit%EA%B5%90%EC%9C%A1%EC%84%BC%ED%84%B0&srcid=8419265&map_type=TYPE_MAP" target="_blank" class="mapBtn">지도 자세히보기</a>
+                </div>
             </div>
         </section>
     </div>
+    <footer class="ft" id="ft">
+        <%@ include file="../footer.jsp" %>
+    </footer>
 </div>
-<footer class="ft" id="ft">
-    <%@ include file="../footer.jsp" %>
-</footer>
 </body>
 </html>
