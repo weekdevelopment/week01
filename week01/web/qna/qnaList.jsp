@@ -15,7 +15,7 @@
     DBC con = new MariaDBCon();
     conn = con.connect();
     //3. SQL을 실행하여 결과셋(ResultSet) 받아오기
-    String sql = "SELECT a.qno AS qno, a.title AS title, a.content AS content, a.author AS author, a.resdate AS resdate, a.cnt as cnt, a.lev AS lev, a.par AS par, b.name AS name FROM qna a, member b WHERE a.author=b.id order BY a.par DESC, a.lev ASC, a.qno ASC";
+    String sql = "SELECT * FROM qnalist";
     pstmt = conn.prepareStatement(sql);
     rs = pstmt.executeQuery();
     //4. 받아온 결과셋(ResultSet) 을 질문및답변 목록(qnaList)에 불러와 하나의 레코드씩 담기
@@ -120,9 +120,15 @@
                     <%
                         SimpleDateFormat ymd = new SimpleDateFormat("yy-MM-dd");
                         int tot = qnaList.size();
-                        for(Qna q:qnaList) {
+                        for (Qna q : qnaList) {
                             Date d = ymd.parse(q.getResdate());
                             String date = ymd.format(d);
+                            String originName = q.getName();
+                            String author = q.getAuthor();
+                            String secretName = originName;
+                            if (!author.equals("admin")) {
+                                secretName = originName.length() <= 2 ? originName.charAt(0) + "****" : originName.substring(0, 2) + "****";
+                            }
                     %>
                     <tr>
                         <td class="item1"><%=tot %></td>
@@ -135,7 +141,7 @@
                             </a>
                             <% } %>
                         </td>
-                        <td class="item3"><%=q.getName()%></td>
+                        <td class="item3"><%=secretName %></td>
                         <td class="item4"><%=date %></td>
                     </tr>
                     <%
@@ -151,7 +157,7 @@
                         });
                     });
                 </script>
-                <% if(sid!=null) { %>
+                <% if (sid != null) { %>
                 <div class="btn_group">
                     <a href="/qna/addQuestion.jsp?lev=0&par=0" class="inbtn">질문하기</a>
                 </div>
