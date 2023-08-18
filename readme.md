@@ -76,6 +76,7 @@
 ![공지사항](./img/notice_2.png "공지사항 글 쓰기")
 ![공지사항](./img/notice_3.png "공지사항 글 보기")
 ![공지사항](./img/notice_4.png "공지사항 글 수정")
+![언론보도](./img/masscom.png "언론보도 리스트")
 ![1:1문의](./img/qnaList.png "1:1문의 리스트")
 ![1:1문의](./img/getQna.png "1:1문의 보기")
 ![1:1문의](./img/addQuestion.png "1:1문의하기")
