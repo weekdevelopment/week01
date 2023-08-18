@@ -44,6 +44,7 @@ html과 css, javascript로 작성하고, 백엔드 부분은 jsp의 디렉티브
 ![1:1문의](./img/qnaList.png "1:1문의 리스트")
 ![1:1문의](./img/getQna.png "1:1문의 보기")
 ![1:1문의](./img/addQuestion.png "1:1문의하기")
+![자료실](./img/archive.png "자료실 페이지")
 ![FAQ](./img/faq.png "FAQ")
 ![인재채용](./img/weekcrew_1.png "윜크루 되면")
 ![인재채용](./img/weekcrew_2.png "지원하기")
