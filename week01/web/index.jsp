@@ -524,11 +524,10 @@
 
         .thumb_list {
             display: flex;
-            justify-content: space-between;
             flex-wrap: wrap;
             list-style: none;
             padding: 0;
-            margin: 0;
+            margin-left: 250px;
         }
 
         .thumb_list li {
@@ -541,6 +540,7 @@
         }
 
         .thumb_tit {
+            text-align: center;
             font-size: 22px;
             margin-top: 15px;
         }
@@ -569,6 +569,7 @@
         }
 
         .ico_box .ico_text {
+            margin-left: 70px;
             line-height: 25px;
             display: inline-block;
             vertical-align: top;

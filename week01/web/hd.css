@@ -18,7 +18,7 @@ margin: 0 auto; }
 
 .logo { display:block; width:auto; height:50px; float:left; }
 .logo img {
-    margin-left: 110px;
+    margin-left: -110px;
     margin-top: -20px;
     display: block;
     width: 205px;
