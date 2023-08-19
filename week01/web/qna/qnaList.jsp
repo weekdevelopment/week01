@@ -56,7 +56,7 @@
     <style>
         /* 본문 영역 스타일 */
         .wrap { background-color: #fffcf2; }
-        .contents { clear:both; min-height:120vh;
+        .contents { clear:both; min-height:130vh;
             background-image: url("../images/bg_visual_overview.jpg");
             background-repeat: no-repeat; background-position:center -250px; /*height: 1400px;*/ }
         .contents::after { content:""; clear:both; display:block; width:100%; }
@@ -93,6 +93,12 @@
         .inbtn:last-child { float:right; }
         .reply { padding-left:14px; }
         .reply img { margin:-2px; padding-right: 7px; }
+
+        .dataTables_wrapper {
+            position: relative;
+            clear: both;
+            margin-top: 70px;
+        }
     </style>
     <link rel="stylesheet" href="../ft.css">
     <style>
@@ -116,7 +122,7 @@
             <section class="page" id="page1">
                 <div class="page_wrap">
                     <h2 class="page_tit">질문 및 답변 목록</h2>
-                    <br><br><hr><br><br>
+                    <hr>
                     <table class="tb1" id="myTable">
                         <thead>
                         <tr>
