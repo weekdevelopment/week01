@@ -3,6 +3,8 @@
 <%@ page import="java.sql.*" %>
 <%@ page import="com.week.db.*" %>
 <%@ page import="com.week.vo.*" %>
+<%@ page import="com.week.dto.*" %>
+<%@ page import="java.util.*" %>
 <%-- 2. 인코딩 및 보내온 데이터 받기 --%>
 <%@ include file="/encoding.jsp" %>
 <%
@@ -38,6 +40,20 @@
     pstmt.setInt(1, qno);
     pstmt.executeUpdate();
 
+    sql = "select * from comment where qno=? order by cno";
+    pstmt = conn.prepareStatement(sql);
+    pstmt.setInt(1, qno);
+    rs = pstmt.executeQuery();
+    List<Comment> cmtList = new ArrayList<>();
+    while (rs.next()) {
+        Comment cmt = new Comment();
+        cmt.setCno(rs.getInt("cno"));
+        cmt.setQno(rs.getInt("qno"));
+        cmt.setAuthor(rs.getString("author"));
+        cmt.setResdate(rs.getString("resdate"));
+        cmt.setContent(rs.getString("content"));
+        cmtList.add(cmt);
+    }
     con.close(rs, pstmt, conn);
 %>
 <!DOCTYPE html>
@@ -61,7 +77,7 @@
     <style>
         /* 본문 영역 스타일 */
         .wrap { background-color: #fffcf2; }
-        .contents { clear:both; min-height:900px;
+        .contents { clear:both; min-height:1100px;
             background-image: url("../images/bg_visual_overview.jpg");
             background-repeat: no-repeat; background-position:center -250px; }
         .contents::after { content:""; clear:both; display:block; width:100%; }
@@ -107,6 +123,22 @@
             margin-top: 10px; padding: 8px 16px; background-color: #f5be8b;
             color: white; border: none; border-radius: 5px; cursor: pointer;
         }
+
+        .comment-list {
+            margin: 20px 165px;
+            border: 1px solid #ccc; padding: 10px; border-radius: 5px; width: 920px;
+        }
+
+        .comment-table { width: 77%; border-collapse: collapse; margin: 20px 160px }
+        .comment-table th, .comment-table td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .comment-table th { background-color: #f5be8b; color: #fff }
+        .comment-info { margin-bottom: 10px; }
+        /*.comment-content { white-space: pre-line; !* 줄바꿈 유지 *! }*/
+        .comment-date { margin-left: 20px; font-size: 13px;  color: #777; }
     </style>
     <link rel="stylesheet" href="../ft.css">
 </head>
@@ -193,12 +225,38 @@
                         </tr>
                         </tbody>
                     </table>
-                    <div class="comment-form">
-                        <h3>댓글 작성</h3>
-                        <textarea rows="4" placeholder="댓글을 입력하세요..."></textarea>
-                        <button type="submit">댓글 등록</button>
-                    </div>
+                    <table class="comment-table">
+                        <tr>
+                            <th>댓글 목록</th>
+                        </tr>
+                        <%
+                            for (Comment c : cmtList) {
+                        %>
+                        <tr>
+                            <td>
+                                <div class="comment-info">
+                                    <span><%=c.getAuthor() %></span> <span class="comment-date"><%=c.getResdate() %></span>
+                                </div>
+                                <div class="comment-content"><%=c.getContent() %></div>
+                            </td>
+                        </tr>
+                        <%
+                            }
+                        %>
+                    </table>
 
+                    <div class="comment-form">
+                        <form action="/comment/addCommentPro.jsp" method="post">
+                            <textarea name="commentText" rows="4" cols="50" placeholder="댓글을 입력하세요..."></textarea>
+                            <button type="submit">댓글 작성</button>
+                        </form>
+                        <%--<h3>댓글 작성</h3>
+                        <%
+                            String placeholder = sid == null ? "'로그인이 필요합니다.'" : "'댓글을 입력하세요...'";
+                        %>
+                        <textarea rows="4" placeholder=<%=placeholder %>></textarea>
+                        <button type="submit">댓글 등록</button>--%>
+                    </div>
                 </div>
             </section>
         </div>
