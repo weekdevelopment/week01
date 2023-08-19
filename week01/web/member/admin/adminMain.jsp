@@ -26,17 +26,17 @@
     <style>
         /* 본문 영역 스타일 */
         .wrap { background-color: #fffcf2; }
-        .contents { clear:both; min-height:1800px;
-            background-image: url("../../images/bg_visual_overview.jpg");
-            background-repeat: no-repeat; background-position:center -250px; height: 1400px; }
+        .contents { clear:both;
+            background-image: url("../../weekcrew/images/library.jpg");
+            background-repeat: no-repeat; background-position:center -250px;}
         .contents::after { content:""; clear:both; display:block; width:100%; }
 
         .page { clear:both; width: 100vw; height: 100vh; position:relative; }
         .page::after { content:""; display:block; width: 100%; clear:both; }
 
         .page_wrap { clear:both; width: 1200px; height: auto; margin:0 auto; }
-        .page_tit { font-size:48px; text-align: center; padding-top:1em; color:#fff;
-            padding-bottom: 2.4rem; }
+        .page_tit { font-size:48px; text-align: center; color:#fff;
+            margin-bottom: 36px; }
 
         .breadcrumb { clear:both;
             width:1200px; margin: 0 auto; text-align: right; color:#fff;
@@ -90,15 +90,15 @@
         .btn_group p {text-align: center;   line-height:3.6; }
         section {
             width: 100%;
-            padding: 200px 0px;
+            padding: 50px 0px;
         }
         section .inner {
             width: 1180px;
-            margin: 0px auto;
+            margin: 100px auto;
         }
         section .inner h1 {
             font: bold 24px/1 "arial";
-            color: #555;
+            color: #f5be8b;
             text-align: center;
             margin-bottom: 50px;
         }
@@ -115,10 +115,11 @@
             width: 280px;
             float: left;
             margin-right: 20px;
-            background-color: #0c0c0c;
+            background-color: #f5be8b;
             text-align: center;
             font-size: 30px;
-            padding: 15% 0;
+            padding: 11% 0;
+            border-radius: 32%;
         }
         section .inner .wrap a:last-child {
             /*제일 오른쪽 마지막 요소만 여백제거*/
@@ -126,6 +127,10 @@
         }
         section .inner .wrap a h2 {
             margin-bottom: 10px;
+        }
+        .wrap-a {
+            text-decoration: none;
+            color: #fffcf2;
         }
         section .inner .wrap a h2 a {
             font: bold 16px/1 "arial";
@@ -162,23 +167,21 @@
                 <p><a href="">HOME</a> &gt; <span>관리자 페이지</span></p>
             </div>
             <section>
+                <h2 class="page_tit">WEEK 관리자 페이지</h2>
+                <hr>
                 <div class="inner">
-                    <h1>관리자 페이지</h1>
                     <div class="wrap">
-                        <a href="admin.jsp">
-                            회원정보 관리
+                        <a class="wrap-a" href="/member/admin/admin.jsp">
+                            📂 회원정보 관리
                         </a>
-
-                        <a href="admin.jsp">
-                            회원정보 관리
+                        <a class="wrap-a" href="/member/admin/adminBoard.jsp">
+                            📝 공지사항 관리
                         </a>
-
-                        <a href="admin.jsp">
-                            회원정보 관리
+                        <a class="wrap-a" href="/member/admin/adminMasscom.jsp">
+                            📰 언론보도 관리
                         </a>
-
-                        <a href="admin.jsp">
-                            회원정보 관리
+                        <a class="wrap-a" href="/member/admin/adminWeekcrew.jsp">
+                            📩 윜크루 지원 관리
                         </a>
                     </div>
                 </div>

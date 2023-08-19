@@ -51,7 +51,7 @@
         .indata2 { width: 600px; padding: 14px; font-size:18px; }
         .inbtn { display:block;  border-radius:100px;
             min-width:140px; padding-left: 24px; padding-right: 24px; text-align: center;
-            line-height: 48px; background-color: #f5be8b; color:#fff; font-size: 18px; border-color: #f5be8b; }
+            line-height: 48px; background-color: #f5be8b; color:#fff; font-size: 18px; border-color: #f5be8b;                        }
         .inbtn:first-child { float:left; }
         .inbtn:last-child { float:right; }
     </style>

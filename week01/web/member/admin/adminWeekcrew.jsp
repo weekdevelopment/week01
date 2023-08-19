@@ -17,25 +17,7 @@
         System.out.println("DB 연결 성공");
     }
 
-    String sql = "select * from member where id !='admin' ";
-    pstmt = conn.prepareStatement(sql);
-    rs = pstmt.executeQuery();
-
-    List<Member> memList = new ArrayList<>();
-    while (rs.next()) {
-        Member m = new Member();
-        m.setId(rs.getString("id"));
-        m.setPw(rs.getString("pw"));
-        m.setName(rs.getString("name"));
-        m.setEmail(rs.getString("email"));
-        m.setTel(rs.getString("tel"));
-        m.setRegdate(rs.getString("regdate"));
-        m.setPoint(rs.getInt("point"));
-        memList.add(m);
-    }
-
-    pstmt.close();
-    sql="select * from weekcrew order by wid desc";
+    String sql = "select * from weekcrew order by wid desc";
     pstmt = conn.prepareStatement(sql);
     rs = pstmt.executeQuery();
 
@@ -73,7 +55,7 @@
     <style>
         /* 본문 영역 스타일 */
         .wrap { background-color: #fffcf2; }
-        .contents { clear:both; min-height:800px;
+        .contents { clear:both; min-height:1700px;
             background-image: url("../../weekcrew/images/library.jpg");
             background-repeat: no-repeat; background-position:center -250px; }
         .contents::after { content:""; clear:both; display:block; width:100%; }
@@ -98,15 +80,24 @@
         .tb1 td {line-height:32px;
             border-bottom:1px solid #f5be8b;
             border-top:1px solid #f5be8b; }
+        .tb1 .kick { width:5%; text-align: center; }
 
-        .tb1 .item1 { width:10%; text-align: center; }
-        .tb1 .item2 { width:15%; text-align: center; max-width: 50px; overflow: hidden;}
-        .tb1 .item3 { width:10%; text-align: center; }
-        .tb1 .item4 { width:15%; text-align: center; }
-        .tb1 .item5 { width:15%; text-align: center; }
-        .tb1 .item6 { width:15%; text-align: center; }
-        .tb1 .item7 { width:10%; text-align: center; }
-        .tb1 .kick { width:10%; text-align: center; }
+        .tb1 .item8 { width:5%; text-align: center;  max-width: 100px;
+            padding: 0 20px;
+            overflow: hidden;}
+        .tb1 .item9 { width:10%; text-align: center;
+            max-width: 150px;
+            padding: 0 20px;
+            overflow: hidden;}
+        .tb1 .item10 { width:35%; text-align: center;
+            overflow: hidden;
+            max-width: 200px;}
+        .tb1 .item11 { width:35%; text-align: center;
+            overflow: hidden;
+            max-width: 200px;}
+        .tb1 .item12 { width:15%; text-align: center;
+            overflow: hidden;
+            max-width: 200px;}
 
         h3 {
             clear: both;
@@ -147,48 +138,35 @@
         </header>
         <div class="contents" id="contents">
             <div class="breadcrumb">
-                <p><a href="">HOME</a> &gt; <span>관리자 페이지</span> &gt; <span>회원정보 관리</span></p>
+                <p><a href="">HOME</a> &gt; <span>관리자 페이지</span> &gt; <span>윜크루 지원 관리</span></p>
             </div>
             <section class="page" id="page1">
                 <div class="page_wrap">
-                    <h2 class="page_tit">회원정보 관리</h2>
+                    <h2 class="page_tit">윜크루 지원 관리</h2>
                     <hr>
-                    <div class="member">
-                        <table class="tb1" id="myTable">
+                    <div class="weekcrew">
+                        <h3 class="wc">윜크루 지원 현황</h3>
+                        <table class="tb1" id="myTable2">
                             <thead>
                             <tr>
-                                <th class="item1">아이디</th>
-                                <th class="item2">비밀번호</th>
-                                <th class="item3">이름</th>
-                                <th class="item4">전화번호</th>
-                                <th class="item5">이메일</th>
-                                <th class="item6">가입일자</th>
-                                <th class="item7">점수</th>
-                                <th class="kick">관리</th>
+                                <th class="item8">이름</th>
+                                <th class="item9">이메일</th>
+                                <th class="item10">지원 문항 1</th>
+                                <th class="item11">지원 문항 2</th>
+                                <th class="item12">관리</th>
                             </tr>
                             </thead>
                             <tbody>
+
                             <%
-                                SimpleDateFormat ymd = new SimpleDateFormat("yyyy-MM-dd");
-                                for (Member m : memList) {
-                                    Date d = ymd.parse(m.getRegdate()); //날짜데이터로 변경
-                                    String date = ymd.format(d); //형식을 포함한 문자열로 변경
+                                for (Weekcrew w : wcList) {
                             %>
                             <tr>
-                                <td class="item1"><%=m.getId() %></td>
-                                <td class="item2"><%=m.getPw().substring(0,2) %>
-                                    <%
-                                        for (int i=0; i<m.getPw().length()-2; i++) {
-                                            out.print("*");
-                                        }
-                                    %>
-                                </td>
-                                <td class="item3"><%=m.getName() %></td>
-                                <td class="item4"><%=m.getTel() %></td>
-                                <td class="item5"><%=m.getEmail() %></td>
-                                <td class="item6"><%=date %></td>
-                                <td class="item7"><%=m.getPoint()%></td>
-                                <td class="kick"><button class="inbtn" onclick="kickMember('<%=m.getId() %>')">탈퇴</button></td>
+                                <td class="item8"><%=w.getName() %></td>
+                                <td class="item9"><%=w.getEmail() %></td>
+                                <td class="item10"><%=w.getContent() %></td>
+                                <td class="item11"><%=w.getContent2() %></td>
+                                <td class="item12 kick"><button class="inbtn" onclick="administerWC('<%=w.getWid() %>')">삭제</button></td>
                             </tr>
                             <%
                                 }
@@ -196,11 +174,8 @@
                             </tbody>
                         </table>
                         <script>
-                            function kickMember(memId) {
-                                var flag = confirm("정말로 이 회원을 강퇴하시겠습니까?");
-                                if (flag) {
-                                    window.location.href = "/member/delMember.jsp?id="+memId+"&mode=0";
-                                }
+                            function administerWC(wid) {
+                                window.location.href = "/member/admin/deleteWeekcrew.jsp?wid="+wid;
                             }
                         </script>
                     </div>

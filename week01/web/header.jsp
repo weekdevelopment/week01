@@ -13,7 +13,7 @@
                 <li><a href="<%=path8 %>/member/mypage.jsp">마이페이지</a></li>
                 <li><a href="<%=path8 %>/contact/map.jsp">오시는길</a></li>
                     <% if(sid.equals("admin")) { %>
-                    <li><a href="<%=path8 %>/member/admin/mainAdmin.jsp">관리자페이지로</a></li>
+                    <li><a href="<%=path8 %>/member/admin/adminMain.jsp">관리자페이지로</a></li>
                     <% } %>
             <% } else { %>
                 <li><a href="<%=path8 %>/member/login.jsp">로그인</a></li>
@@ -40,7 +40,7 @@
                 <a href="/board/boardList.jsp" class="dp1">윜 News</a>
                 <ul class="sub">
                     <li><a href="/board/boardList.jsp">윜 소식</a></li>
-                    <li><a href="biz.html#ref">언론보도</a></li>
+                    <li><a href="/masscom/masscom.jsp">언론보도</a></li>
                 </ul>
             </li>
             <li class="item3">
