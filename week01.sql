@@ -13,17 +13,17 @@ CREATE TABLE MEMBER(
 
 -- 회원 더미 데이터 삽입
 INSERT INTO MEMBER(id, pw, NAME, email, tel) VALUES 
-('admin', '1234', '관리자', 'admin@week.com', '010-1004-1004');
+('admin', '0ffe1abd1a08215353c233d6e009613e95eec4253832a761af28ff37ac5a150c', '관리자', 'admin@week.com', '010-1004-1004');
 INSERT INTO MEMBER(id, pw, NAME, email, tel) VALUES 
-('kim', '4321', '김영훈', 'kim@week.com', '010-7979-2848');
+('kim', '0ffe1abd1a08215353c233d6e009613e95eec4253832a761af28ff37ac5a150c', '김영훈', 'kim@week.com', '010-7979-2848');
 INSERT INTO MEMBER(id, pw, NAME, email, tel) VALUES 
-('lee', '1111', '이주연', 'lee@week.com', '010-2424-2424');
-INSERT INTO MEMBER(id, pw, NAME, email, tel) VALUES
-('park', '7979', '박정우', 'park@week.com', '010-2848-7979');
+('lee', '0ffe1abd1a08215353c233d6e009613e95eec4253832a761af28ff37ac5a150c', '이주연', 'lee@week.com', '010-2424-2424');
+INSERT INTO MEMBER(id, pw, NAME, email, tel) VALUES `week`
+('park', '0ffe1abd1a08215353c233d6e009613e95eec4253832a761af28ff37ac5a150c', '박정우', 'park@week.com', '010-2848-7979');
 INSERT INTO MEMBER(id, pw, NAME, email, tel) VALUES 
-('so', '2222', '소정환', 'so@week.com', '010-2222-1234');
+('so', '0ffe1abd1a08215353c233d6e009613e95eec4253832a761af28ff37ac5a150c', '소정환', 'so@week.com', '010-2222-1234');
 INSERT INTO MEMBER(id, pw, NAME, email, tel) VALUES 
-('yoon', '3333', '윤도운', 'yoon@week.com', '010-3333-3333');
+('yoon', '0ffe1abd1a08215353c233d6e009613e95eec4253832a761af28ff37ac5a150c', '윤도운', 'yoon@week.com', '010-3333-3333');
 
 -- 공지사항 테이블 생성
 CREATE TABLE board(
