@@ -7,7 +7,9 @@
     //2. 보내온 데이터 받기
     //int qno = Integer.parseInt(request.getParameter("qno"));
     String id = request.getParameter("id");
+    int mode = Integer.parseInt(request.getParameter("mode"));
     System.out.println(id);
+    System.out.println(mode);
 
     //3. DB 연결
     Connection conn = null;
@@ -21,10 +23,17 @@
 
     int cnt = pstmt.executeUpdate();
     if (cnt > 0) {
-        System.out.println("회원이 삭제되었습니다.");
-        response.sendRedirect("/member/admin.jsp");
+        System.out.println("회원 삭제 성공");
+        session.invalidate();
+        if (mode == 0) {
+            out.println("<script>alert('회원을 삭제하였습니다.');");
+            out.println("location.href='/member/admin.jsp';</script>");
+        } else {
+            out.println("<script>alert('탈퇴가 완료되었습니다.');");
+            out.println("location.href='/';</script>");
+        }
     } else {
-        System.out.println("회원 삭제가 실패되었습니다.");
+        System.out.println("회원 삭제 실패");
         //response.sendRedirect("/qna/updateQna.jsp?qno="+qno);
         out.println("<script>alert('회원 삭제 실패');</script>");
         out.println("<script>history.go(-1);</script>");

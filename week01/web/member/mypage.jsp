@@ -88,11 +88,8 @@
         .tb1 .th1:first-child {border-radius: 50% 0 0 0;}
         .tb1 .th2 {border-radius: 0 0 0 50%;}
 
-        .inbtn { display:block;  border-radius:100px;
-            min-width:140px; padding-left: 24px; padding-right: 24px; text-align: center;
-            line-height: 48px; background-color: #f5be8b; color:#fff; font-size: 18px; }
-        .inbtn:first-child { float:left; }
-        .inbtn:last-child { float:right; }
+        .inbtn { display: inline-block; margin: 10px; padding: 10px 30px;
+            border-radius: 100px; background-color: #f5be8b; color: #fff; }
     </style>
 
     <link rel="stylesheet" href="../ft.css">
@@ -149,11 +146,20 @@
                         <tr>
                             <td colspan="2">
                                 <a href="/member/modify.jsp" class="inbtn">회원정보수정</a>
+                                <a href="javascript:withdraw('<%=mem.getId() %>')" class="inbtn">회원탈퇴</a>
                                 <a href="/" class="inbtn">메인으로</a>
                             </td>
                         </tr>
                         </tbody>
                     </table>
+                    <script>
+                        function withdraw(memId) {
+                            var flag = confirm("정말로 탈퇴하시겠습니까?");
+                            if (flag) {
+                                window.location.href = "/member/delMember.jsp?id="+memId+"&mode=1";
+                            }
+                        }
+                    </script>
             </div>
         </section>
     </div>

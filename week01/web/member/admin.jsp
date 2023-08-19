@@ -191,7 +191,7 @@
                                 <td class="item5"><%=m.getEmail() %></td>
                                 <td class="item6"><%=date %></td>
                                 <td class="item7"><%=m.getPoint()%></td>
-                                <td class="kick"><button class="kick-btn" onclick="kickMember('<%=m.getId() %>')">탈퇴</button></td>
+                                <td class="kick"><button onclick="kickMember('<%=m.getId() %>')">탈퇴</button></td>
                             </tr>
                             <%
                                 }
@@ -202,8 +202,7 @@
                             function kickMember(memId) {
                                 var flag = confirm("정말로 이 회원을 강퇴하시겠습니까?");
                                 if (flag) {
-                                    // "admin.jsp" 페이지로 이동
-                                    window.location.href = "/member/delMember.jsp?id="+memId;
+                                    window.location.href = "/member/delMember.jsp?id="+memId+"&mode=0";
                                 }
                             }
                         </script>
