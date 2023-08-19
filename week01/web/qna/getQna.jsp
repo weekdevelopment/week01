@@ -245,18 +245,22 @@
                         %>
                     </table>
 
-                    <div class="comment-form">
-                        <form action="/comment/addCommentPro.jsp" method="post">
-                            <textarea name="commentText" rows="4" cols="50" placeholder="댓글을 입력하세요..."></textarea>
-                            <button type="submit">댓글 작성</button>
-                        </form>
-                        <%--<h3>댓글 작성</h3>
-                        <%
-                            String placeholder = sid == null ? "'로그인이 필요합니다.'" : "'댓글을 입력하세요...'";
-                        %>
-                        <textarea rows="4" placeholder=<%=placeholder %>></textarea>
-                        <button type="submit">댓글 등록</button>--%>
-                    </div>
+                    <%
+                        boolean isLoggedIn = sid != null;
+                    %>
+                    <form action="/comment/addCommentPro.jsp" method="post" class="comment-form">
+                        <div class="comment-input">
+                            <textarea name="content" placeholder="<%= isLoggedIn ? "댓글을 입력하세요..." : "로그인하세요" %>" rows="5"></textarea>
+                            <input type="hidden" name="qno" id="qno" value="<%=qno %>">
+                        </div>
+                        <div class="comment-submit">
+                            <% if (isLoggedIn) { %>
+                            <input type="submit" value="댓글 작성">
+                            <% } else { %>
+                            <a href="/member/login.jsp" class="login-link">로그인</a>
+                            <% } %>
+                        </div>
+                    </form>
                 </div>
             </section>
         </div>
