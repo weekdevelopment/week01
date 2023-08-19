@@ -61,7 +61,7 @@
     <style>
         /* 본문 영역 스타일 */
         .wrap { background-color: #fffcf2; }
-        .contents { clear:both; min-height:800px;
+        .contents { clear:both; min-height:900px;
             background-image: url("../images/bg_visual_overview.jpg");
             background-repeat: no-repeat; background-position:center -250px; }
         .contents::after { content:""; clear:both; display:block; width:100%; }
@@ -92,13 +92,23 @@
         .inbtn { display:block;  border-radius:100px;
             min-width:100px; padding-left: 24px; padding-right: 24px; text-align: center;
             line-height: 48px; background-color: #f5be8b; color:#fff; font-size: 18px;
-            float:left; margin-right: 20px; }
+            float:left; margin-right: 20px; margin-top: 10px; }
         .inbtn:last-child { float:right; }
-    </style>
 
-    <link rel="stylesheet" href="../ft.css">
-    <style>
+        .comment-form { margin: 5px 165px;
+            border: 1px solid #ccc; padding: 10px; border-radius: 5px; width: 900px;
+        }
+        .comment-form textarea {
+            width: 98%; padding: 10px; margin-top: 10px;
+            border: 1px solid #ccc; border-radius: 5px; font-size: 16px;
+            resize: vertical;
+        }
+        .comment-form button {
+            margin-top: 10px; padding: 8px 16px; background-color: #f5be8b;
+            color: white; border: none; border-radius: 5px; cursor: pointer;
+        }
     </style>
+    <link rel="stylesheet" href="../ft.css">
 </head>
 <body>
 <div class="container">
@@ -113,7 +123,7 @@
             <section class="page" id="page1">
                 <div class="page_wrap">
                     <h2 class="page_tit">질문 및 답변 글 상세보기</h2>
-                    <br><br><hr><br><br>
+                    <hr>
                     <table class="tb1" id="myTable">
                         <tbody>
                         <!-- 6. 해당 글번호에 대한 글 상세내용 출력 -->
@@ -183,6 +193,12 @@
                         </tr>
                         </tbody>
                     </table>
+                    <div class="comment-form">
+                        <h3>댓글 작성</h3>
+                        <textarea rows="4" placeholder="댓글을 입력하세요..."></textarea>
+                        <button type="submit">댓글 등록</button>
+                    </div>
+
                 </div>
             </section>
         </div>
