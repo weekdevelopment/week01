@@ -146,7 +146,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>작성일시</th>
+                            <th>작성일</th>
                             <td><%=qna.getResdate() %></td>
                         </tr>
                         <tr>

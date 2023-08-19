@@ -120,11 +120,11 @@
                     <table class="tb1" id="myTable">
                         <thead>
                         <tr>
-                            <th class="item1">번호</th>
-                            <th class="item2">제목</th>
+                            <th class="item1">글 번호</th>
+                            <th class="item2">글 제목</th>
                             <th class="item3">작성자</th>
                             <th class="item4">작성일</th>
-                            <th class="item5">조회</th>
+                            <th class="item5">조회수</th>
                         </tr>
                         </thead>
                         <tbody>
