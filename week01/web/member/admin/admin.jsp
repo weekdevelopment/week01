@@ -58,23 +58,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>공지사항 목록</title>
-    <%@ include file="../head.jsp" %>
+    <%@ include file="../../head.jsp" %>
     <!-- 스타일 초기화 : reset.css 또는 normalize.css -->
     <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" rel="stylesheet">
 
     <!-- 필요한 폰트를 로딩 : 구글 웹 폰트에서 폰트를 선택하여 해당 내용을 붙여 넣기 -->
-    <link rel="stylesheet" href="../google.css">
-    <link rel="stylesheet" href="../fonts.css">
+    <link rel="stylesheet" href="../../google.css">
+    <link rel="stylesheet" href="../../fonts.css">
 
     <!-- 필요한 플러그인 연결 -->
     <script src="https://code.jquery.com/jquery-latest.js"></script>
-    <link rel="stylesheet" href="../common.css">
-    <link rel="stylesheet" href="../hd.css">
+    <link rel="stylesheet" href="../../common.css">
+    <link rel="stylesheet" href="../../hd.css">
     <style>
         /* 본문 영역 스타일 */
         .wrap { background-color: #fffcf2; }
         .contents { clear:both; min-height:1800px;
-            background-image: url("../images/bg_visual_overview.jpg");
+            background-image: url("../../images/bg_visual_overview.jpg");
             background-repeat: no-repeat; background-position:center -250px; height: 1400px; }
         .contents::after { content:""; clear:both; display:block; width:100%; }
 
@@ -130,7 +130,7 @@
             color: #f5be8b;}
     </style>
 
-    <link rel="stylesheet" href="../ft.css">
+    <link rel="stylesheet" href="../../ft.css">
     <style>
         .btn_group { clear:both; width:800px; margin:20px auto; }
         .btn_group:after { content:""; display:block; width:100%; clear: both; }
@@ -142,7 +142,7 @@
 <div class="container">
     <div class="wrap">
         <header class="hd" id="hd">
-            <%@ include file="../header.jsp" %>
+            <%@ include file="../../header.jsp" %>
         </header>
         <div class="contents" id="contents">
             <div class="breadcrumb">
@@ -226,7 +226,7 @@
             </section>
         </div>
         <footer class="ft" id="ft">
-            <%@ include file="../footer.jsp" %>
+            <%@ include file="../../footer.jsp" %>
         </footer>
     </div>
 </div>
