@@ -31,6 +31,14 @@
         qna.setLev(rs.getInt("lev"));
         qna.setPar(rs.getInt("par"));
     }
+
+    pstmt.close();
+    sql = "update qna set cnt=cnt+1 where qno=?";
+    pstmt = conn.prepareStatement(sql);
+    pstmt.setInt(1, qno);
+    pstmt.executeUpdate();
+
+    con.close(rs, pstmt, conn);
 %>
 <!DOCTYPE html>
 <html lang="en">
@@ -138,7 +146,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>작성일시</th>
+                            <th>작성일</th>
                             <td><%=qna.getResdate() %></td>
                         </tr>
                         <tr>

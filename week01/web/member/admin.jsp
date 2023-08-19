@@ -93,17 +93,20 @@
         .tb1 th { line-height:32px; padding-top:8px; padding-bottom:8px;
             border-top:1px solid #f5be8b; border-bottom:1px solid #f5be8b;
             background-color: #f5be8b; color:#fff; }
+        .tb1 th .kick{ display: none; }
+
         .tb1 td {line-height:32px;
             border-bottom:1px solid #f5be8b;
             border-top:1px solid #f5be8b; }
 
-        .tb1 .item1 { width:10%; text-align: center; }
-        .tb1 .item2 { width:10%; text-align: center; max-width: 50px; overflow: hidden;}
+        .tb1 .item1 { width:15%; text-align: center; }
+        .tb1 .item2 { width:15%; text-align: center; max-width: 50px; overflow: hidden;}
         .tb1 .item3 { width:10%; text-align: center; }
-        .tb1 .item4 { width:20%; text-align: center; }
-        .tb1 .item5 { width:20%; text-align: center; }
-        .tb1 .item6 { width:20%; text-align: center; }
-        .tb1 .item7 { width:20%; text-align: center; }
+        .tb1 .item4 { width:15%; text-align: center; }
+        .tb1 .item5 { width:15%; text-align: center; }
+        .tb1 .item6 { width:15%; text-align: center; }
+        .tb1 .item7 { width:10%; text-align: center; }
+        .tb1 .kick { width:5%; text-align: center; }
 
         .tb1 .item8 { width:5%; text-align: center;  max-width: 100px;
             padding: 0 20px;
@@ -164,6 +167,7 @@
                                 <th class="item5">이메일</th>
                                 <th class="item6">가입일자</th>
                                 <th class="item7">점수</th>
+                                <th class="kick">관리</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -187,12 +191,21 @@
                                 <td class="item5"><%=m.getEmail() %></td>
                                 <td class="item6"><%=date %></td>
                                 <td class="item7"><%=m.getPoint()%></td>
+                                <td class="kick"><button onclick="kickMember('<%=m.getId() %>')">탈퇴</button></td>
                             </tr>
                             <%
                                 }
                             %>
                             </tbody>
                         </table>
+                        <script>
+                            function kickMember(memId) {
+                                var flag = confirm("정말로 이 회원을 강퇴하시겠습니까?");
+                                if (flag) {
+                                    window.location.href = "/member/delMember.jsp?id="+memId+"&mode=0";
+                                }
+                            }
+                        </script>
                     </div>
                     <div class="weekcrew">
                         <h3 class="wc">윜크루 지원 현황</h3>

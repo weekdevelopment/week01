@@ -81,9 +81,11 @@
             border-top:1px solid #f5be8b; }
 
         .tb1 .item1 { width:10%; text-align: center; }
-        .tb1 .item2 { width:65%; }
+        .tb1 .item2 { width:55%; }
         .tb1 .item3 { width:10%; text-align: center; }
         .tb1 .item4 { width:15%; text-align: center; }
+        .tb1 .item5 { width:10%; text-align: center; }
+
         .inbtn { display:block;  border-radius:100px;
             min-width:140px; padding-left: 24px; padding-right: 24px; text-align: center;
             line-height: 48px; background-color: #f5be8b; color:#fff; font-size: 18px; }
@@ -118,8 +120,11 @@
                     <table class="tb1" id="myTable">
                         <thead>
                         <tr>
-                            <th class="item1">글번호</th><th class="item2">제목</th>
-                            <th class="item3">작성자</th><th class="item4">작성일</th>
+                            <th class="item1">글 번호</th>
+                            <th class="item2">글 제목</th>
+                            <th class="item3">작성자</th>
+                            <th class="item4">작성일</th>
+                            <th class="item5">조회수</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -129,12 +134,6 @@
                             for (Qna q : qnaList) {
                                 Date d = ymd.parse(q.getResdate());
                                 String date = ymd.format(d);
-                                String originName = q.getName();
-                                String author = q.getAuthor();
-                                String secretName = originName;
-                                if (!author.equals("admin")) {
-                                    secretName = originName.length() <= 2 ? originName.charAt(0) + "****" : originName.substring(0, 2) + "****";
-                                }
                         %>
                         <tr>
                             <td class="item1"><%=tot %></td>
@@ -147,8 +146,9 @@
                                 </a>
                                 <% } %>
                             </td>
-                            <td class="item3"><%=secretName %></td>
+                            <td class="item3"><%=q.getName() %></td>
                             <td class="item4"><%=date %></td>
+                            <td class="item5"><%=q.getCnt() %></td>
                         </tr>
                         <%
                                 tot--;
