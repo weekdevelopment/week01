@@ -55,15 +55,13 @@ html, css, javascript로 작성하였습니다. <br>
 ![개념적 설계](./readmeimage/9.png)
 ![개념적 설계](./readmeimage/10.png)
 <br>
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
 ![개념적 설계](./readmeimage/usecase.png "개념적 설계")
-
 ![논리적 설계](./readmeimage/논리적설계.png "논리적 설계")
-
 ![물리적 설계](./readmeimage/물리적설계.png "물리적 설계")
-![클래스 다이어그램](./img/database/classdiagram.png "클래스 다이어그램")
-![테이블 구현](./img/database/dbtables.png "테이블 구현")
-![테이블 구현](./img/database/tableERD.png "테이블 구현")
+![클래스 다이어그램](./readmeimage/classdiagram.png "클래스 다이어그램")
+![테이블 구현](./readmeimage/dbtables.png "테이블 구현")
+![테이블 구현](./readmeimage/tableERD.png "테이블 구현")
 ![회원가입 unitTaskFlow](./img/database/unitTaskFlow_1.png "회원가입 unitTaskFlow")
 ![로그인 unitTaskFlow](./img/database/unitTaskFlow_2.png "로그인 unitTaskFlow")
 ![회원정보 수정 unitTaskFlow](./img/database/unitTaskFlow_3.png "회원정보 수정 unitTaskFlow")
