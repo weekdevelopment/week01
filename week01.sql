@@ -18,7 +18,7 @@ INSERT INTO MEMBER(id, pw, NAME, email, tel) VALUES
 ('kim', '0ffe1abd1a08215353c233d6e009613e95eec4253832a761af28ff37ac5a150c', '김영훈', 'kim@week.com', '010-7979-2848');
 INSERT INTO MEMBER(id, pw, NAME, email, tel) VALUES 
 ('lee', '0ffe1abd1a08215353c233d6e009613e95eec4253832a761af28ff37ac5a150c', '이주연', 'lee@week.com', '010-2424-2424');
-INSERT INTO MEMBER(id, pw, NAME, email, tel) VALUES `week`
+INSERT INTO MEMBER(id, pw, NAME, email, tel) VALUES
 ('park', '0ffe1abd1a08215353c233d6e009613e95eec4253832a761af28ff37ac5a150c', '박정우', 'park@week.com', '010-2848-7979');
 INSERT INTO MEMBER(id, pw, NAME, email, tel) VALUES 
 ('so', '0ffe1abd1a08215353c233d6e009613e95eec4253832a761af28ff37ac5a150c', '소정환', 'so@week.com', '010-2222-1234');
@@ -88,6 +88,7 @@ INSERT INTO qna(title, content, author, lev) VALUES('질문2', '질문2 내용�
 INSERT INTO qna(title, content, author, lev) VALUES('질문3', '질문3 내용입니다.', 'park', 0);
 INSERT INTO qna(title, content, author, lev) VALUES('질문4', '질문4 내용입니다.', 'so', 0);
 INSERT INTO qna(title, content, author, lev) VALUES('질문5', '질문5 내용입니다.', 'yoon', 0);
+INSERT INTO qna(title, content, author, lev) VALUES('질문6', '질문6 내용입니다.', 'kim', 0);
 UPDATE qna SET par=qno WHERE lev = 0;
 
 INSERT INTO qna(title, content, author, lev, par) VALUES('질문1 답변', '답변 내용', 'park', 1, 1);
@@ -95,6 +96,7 @@ INSERT INTO qna(title, content, author, lev, par) VALUES('질문2 답변', '답�
 INSERT INTO qna(title, content, author, lev, par) VALUES('질문3 답변', '답변 내용', 'admin', 1, 3);
 INSERT INTO qna(title, content, author, lev, par) VALUES('질문4 답변', '답변 내용', 'admin', 1, 4);
 INSERT INTO qna(title, content, author, lev, par) VALUES('질문5 답변', '답변 내용', 'admin', 1, 5);
+INSERT INTO qna(title, content, author, lev, par) VALUES('질문6 답변', '답변 내용', 'admin', 1, 6);
 
 -- qnalist 뷰 생성
 CREATE VIEW qnalist AS (SELECT a.qno AS qno, a.title AS title, a.content AS content, 
@@ -146,5 +148,22 @@ INSERT INTO masscom(title, link, resdate) VALUES('수 개념 원리부터 깨닫
 INSERT INTO masscom(title, link, resdate) VALUES('중등인강 밀크티, 신규 TVCF 공개! 교과서 만드는 회사가 인강을?','https://www.dt.co.kr/contents.html?article_no=2023072102109923083004&ref=naver','2023-07-22');
 INSERT INTO masscom(title, link, resdate) VALUES('천재교육, ‘경상북도교육청 에듀테크 매칭플레이스’ 참가','https://edu.chosun.com/site/data/html_dir/2023/07/20/2023072001793.html','2023-07-21');
 INSERT INTO masscom(title, link, resdate) VALUES('천재교과서, 교재 400권 갖춘 앱 ‘디북’ iOS버전 출시','https://news.mtn.co.kr/news-detail/2023071808574643108','2023-07-19');
+
+-- 1:1 문의 게시판 댓글 테이블 생성
+CREATE TABLE comment(
+	cno INT PRIMARY KEY AUTO_INCREMENT,
+	qno INT,
+	author VARCHAR(16),
+   resdate TIMESTAMP DEFAULT CURRENT_TIMESTAMP(),
+   content VARCHAR(200),
+   FOREIGN KEY(qno) REFERENCES qna(qno) ON DELETE CASCADE
+);
+
+-- 댓글 더미 데이터 삽입
+INSERT INTO comment(qno, author, content) VALUES(3, 'kim', '테스트용 댓글');
+INSERT INTO comment(qno, author, content) VALUES(4, 'lee', '테스트용 댓글');
+INSERT INTO comment(qno, author, content) VALUES(5, 'park', '테스트용 댓글');
+INSERT INTO comment(qno, author, content) VALUES(6, 'so', '테스트용 댓글');
+INSERT INTO comment(qno, author, content) VALUES(12, 'yoon', '테스트용 댓글');
 
 COMMIT;
