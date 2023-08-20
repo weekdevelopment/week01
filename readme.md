@@ -56,21 +56,20 @@ html, css, javascript로 작성하였습니다. <br>
 ![개념적 설계](./readmeimage/10.png)
 <br>
 
+## 개념적 설계
 ![개념적 설계](./readmeimage/usecase.png "개념적 설계")
+## 논리적 설계
 ![논리적 설계](./readmeimage/논리적설계.png "논리적 설계")
+## 물리적 설계
 ![물리적 설계](./readmeimage/물리적설계.png "물리적 설계")
+## 클래스 다이어그램
 ![클래스 다이어그램](./readmeimage/classdiagram.png "클래스 다이어그램")
+## Table
 ![테이블 구현](./readmeimage/dbtables.png "테이블 구현")
 ![테이블 구현](./readmeimage/tableERD.png "테이블 구현")
-![회원가입 unitTaskFlow](./img/database/unitTaskFlow_1.png "회원가입 unitTaskFlow")
-![로그인 unitTaskFlow](./img/database/unitTaskFlow_2.png "로그인 unitTaskFlow")
-![회원정보 수정 unitTaskFlow](./img/database/unitTaskFlow_3.png "회원정보 수정 unitTaskFlow")
-![1:1 문의 unitTaskFlow](./img/database/unitTaskFlow_6.png "1:1 문의 unitTaskFlow")
-![윜소식(공지사항) unitTaskFlow](./img/database/unitTaskFlow_4.png "윜소식(공지사항) unitTaskFlow")
-![언론보도 unitTaskFlow](./img/database/unitTaskFlow_8.png "언론보도 unitTaskFlow")
-![FAQ unitTaskFlow](./img/database/unitTaskFlow_7.png "FAQ unitTaskFlow")
-![인재채용(지원하기) unitTaskFlow](./img/database/unitTaskFlow_5.png "인재채용(지원하기) unitTaskFlow")
 
+## 기능흐름도 (Unit Task Flow)
+![unitTaskFlow](./readmeimage/기능흐름도.png "unitTaskFlow")
 
 ## 기능 구현
 ![헤더](./img/index/header.png "헤더")
