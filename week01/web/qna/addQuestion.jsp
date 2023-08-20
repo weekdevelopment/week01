@@ -32,7 +32,7 @@
         .wrap { background-color: #fffcf2; }
         .contents { clear:both; min-height:100vh;
             background-image: url("../images/bg_visual_overview.jpg");
-            background-repeat: no-repeat; background-position:center -250px; height: 1400px; }
+            background-repeat: no-repeat; background-position:center -250px; }
         .contents::after { content:""; clear:both; display:block; width:100%; }
 
         .page { clear:both; width: 100vw; height: 100vh; position:relative; }
@@ -46,13 +46,6 @@
             width:1200px; margin: 0 auto; text-align: right; color:#fff;
             padding-top: 28px; padding-bottom: 28px; }
         .breadcrumb a { color:#fff; }
-        /*.tb1 { width:800px; margin:50px auto; }
-        .tb1 th { line-height:32px; padding-top:8px; padding-bottom:8px;
-            border-top:1px solid #f5be8b; border-bottom:1px solid #f5be8b;
-            background-color: #f5be8b; color:#fff; }
-        .tb1 td {line-height:32px;
-            border-bottom:1px solid #f5be8b;
-            border-top:1px solid #f5be8b; }*/
 
         .tb1 { width:800px; margin:50px auto; }
         .tb1 th { width:150px; line-height:32px; padding-top:8px; padding-bottom:8px;

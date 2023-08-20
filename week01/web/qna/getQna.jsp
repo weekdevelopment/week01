@@ -3,6 +3,8 @@
 <%@ page import="java.sql.*" %>
 <%@ page import="com.week.db.*" %>
 <%@ page import="com.week.vo.*" %>
+<%@ page import="com.week.dto.*" %>
+<%@ page import="java.util.*" %>
 <%-- 2. 인코딩 및 보내온 데이터 받기 --%>
 <%@ include file="/encoding.jsp" %>
 <%
@@ -32,12 +34,26 @@
         qna.setPar(rs.getInt("par"));
     }
 
-    pstmt.close();
+    //pstmt.close();
     sql = "update qna set cnt=cnt+1 where qno=?";
     pstmt = conn.prepareStatement(sql);
     pstmt.setInt(1, qno);
     pstmt.executeUpdate();
 
+    sql = "select * from comment where qno=? order by cno";
+    pstmt = conn.prepareStatement(sql);
+    pstmt.setInt(1, qno);
+    rs = pstmt.executeQuery();
+    List<Comment> cmtList = new ArrayList<>();
+    while (rs.next()) {
+        Comment cmt = new Comment();
+        cmt.setCno(rs.getInt("cno"));
+        cmt.setQno(rs.getInt("qno"));
+        cmt.setAuthor(rs.getString("author"));
+        cmt.setResdate(rs.getString("resdate"));
+        cmt.setContent(rs.getString("content"));
+        cmtList.add(cmt);
+    }
     con.close(rs, pstmt, conn);
 %>
 <!DOCTYPE html>
@@ -61,7 +77,7 @@
     <style>
         /* 본문 영역 스타일 */
         .wrap { background-color: #fffcf2; }
-        .contents { clear:both; min-height:800px;
+        .contents { clear:both; min-height:1100px;
             background-image: url("../images/bg_visual_overview.jpg");
             background-repeat: no-repeat; background-position:center -250px; }
         .contents::after { content:""; clear:both; display:block; width:100%; }
@@ -92,13 +108,43 @@
         .inbtn { display:block;  border-radius:100px;
             min-width:100px; padding-left: 24px; padding-right: 24px; text-align: center;
             line-height: 48px; background-color: #f5be8b; color:#fff; font-size: 18px;
-            float:left; margin-right: 20px; }
+            float:left; margin-right: 20px; margin-top: 10px; }
         .inbtn:last-child { float:right; }
-    </style>
 
-    <link rel="stylesheet" href="../ft.css">
-    <style>
+        .comment-form { margin: 5px 160px;
+            border: 1px solid #ccc; padding: 10px; border-radius: 5px; width: 900px;
+        }
+        .comment-form textarea {
+            width: 98%; padding: 10px; margin-top: 10px;
+            border: 1px solid #ccc; border-radius: 5px; font-size: 16px;
+            resize: vertical;
+        }
+        .comment-form button {
+            margin-top: 10px; padding: 8px 16px; background-color: #f5be8b;
+            color: white; border: none; border-radius: 5px; cursor: pointer;
+        }
+
+        .comment-table { width: 77%; border-collapse: collapse; margin: 20px 160px }
+        .comment-table th, .comment-table td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .comment-table th { background-color: #f5be8b; color: #fff }
+
+        .comment-info { margin-bottom: 10px; }
+        .comment-date { margin-left: 20px; font-size: 13px;  color: #777; }
+        .comment-write {
+            margin-top: 7px; padding: 5px; background-color: #f5be8b; color: #fff;
+            border: none;
+        }
+
+        .del {
+            margin-left: 15px; font-size: 12px; color: #f44336; cursor: pointer;
+        }
+        .del:hover { text-decoration: underline; }
     </style>
+    <link rel="stylesheet" href="../ft.css">
 </head>
 <body>
 <div class="container">
@@ -113,7 +159,7 @@
             <section class="page" id="page1">
                 <div class="page_wrap">
                     <h2 class="page_tit">질문 및 답변 글 상세보기</h2>
-                    <br><br><hr><br><br>
+                    <hr>
                     <table class="tb1" id="myTable">
                         <tbody>
                         <!-- 6. 해당 글번호에 대한 글 상세내용 출력 -->
@@ -138,11 +184,7 @@
                         <tr>
                             <th>작성자</th>
                             <td>
-                                <% if(sid!=null && sid.equals("admin")) { %>
-                                <span title="<%=qna.getAuthor()%>"><%=qna.getName() %></span>
-                                <% } else { %>
-                                <span><%=qna.getName() %></span>
-                                <% } %>
+                                <%=qna.getName() %>
                             </td>
                         </tr>
                         <tr>
@@ -183,6 +225,53 @@
                         </tr>
                         </tbody>
                     </table>
+                    <table class="comment-table">
+                        <tr>
+                            <th>댓글 목록</th>
+                        </tr>
+                        <%
+                            for (Comment c : cmtList) {
+                        %>
+                        <tr>
+                            <td>
+                                <div class="comment-info">
+                                    <span><%=c.getAuthor() %></span>
+                                    <span class="comment-date"><%=c.getResdate() %></span>
+                                    <% if(sid!=null && (sid.equals("admin") || sid.equals(c.getAuthor()))) { %>
+                                    <a href="javascript:delComment('<%=c.getQno() %>', '<%=c.getCno() %>')" class="del">삭제</a>
+                                    <% } %>
+                                </div>
+                                <div class="comment-content"><%=c.getContent() %></div>
+                            </td>
+                        </tr>
+                        <%
+                            }
+                        %>
+                    </table>
+                    <%
+                        boolean isLoggedIn = sid != null;
+                    %>
+                    <form action="/comment/addCommentPro.jsp" method="post" class="comment-form">
+                        <div class="comment-input">
+                            <%
+                                if(isLoggedIn) {
+                            %>
+                            <textarea name="content" placeholder="댓글을 입력하세요..." rows="5"></textarea>
+                            <%
+                                } else {
+                            %>
+                            <textarea placeholder="댓글 쓰기 권한이 없습니다. 로그인 하시겠습니까?" rows="5" onclick="redirectToLogin()"></textarea>
+                            <%
+                                }
+                            %>
+                            <input type="hidden" name="qno" id="qno" value="<%=qno %>">
+                        </div>
+                        <div class="comment-submit">
+                            <% if (isLoggedIn) { %>
+                            <input type="submit" class="comment-write" value="댓글 작성">
+                            <% }  %>
+                        </div>
+                    </form>
                 </div>
             </section>
         </div>
@@ -191,5 +280,17 @@
         </footer>
     </div>
 </div>
+    <script>
+        function delComment(qno, cno) {
+            var flag = confirm("댓글을 삭제하시겠습니까?");
+            if (flag) {
+                location.href = "/comment/delCommentPro.jsp?qno=" + qno + "&cno=" + cno;
+            }
+        }
+
+        function redirectToLogin() {
+            location.href = "/member/login.jsp";
+        }
+    </script>
 </body>
 </html>

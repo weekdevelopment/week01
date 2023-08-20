@@ -152,14 +152,6 @@
                         </tr>
                         </tbody>
                     </table>
-                    <script>
-                        function withdraw(memId) {
-                            var flag = confirm("정말로 탈퇴하시겠습니까?");
-                            if (flag) {
-                                window.location.href = "/member/delMember.jsp?id="+memId+"&mode=1";
-                            }
-                        }
-                    </script>
             </div>
         </section>
     </div>
@@ -167,5 +159,13 @@
         <%@ include file="../footer.jsp" %>
     </footer>
 </div>
+    <script>
+        function withdraw(memId) {
+            var flag = confirm("정말로 탈퇴하시겠습니까?");
+            if (flag) {
+                location.href = "/member/delMember.jsp?id="+memId+"&mode=1";
+            }
+        }
+    </script>
 </body>
 </html>

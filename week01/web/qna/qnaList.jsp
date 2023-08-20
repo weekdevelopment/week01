@@ -33,6 +33,15 @@
         qna.setName(rs.getString("name"));
         qnaList.add(qna);
     }
+
+    sql = "SELECT qna.qno AS qno, COUNT(comment.cno) as countCmt FROM qna LEFT JOIN comment ON qna.qno = comment.qno GROUP BY qna.qno, qna.title";
+    pstmt = conn.prepareStatement(sql);
+    rs = pstmt.executeQuery();
+    Map<Integer, Integer> cmtMap = new HashMap<>();
+    while (rs.next()) {
+        cmtMap.put(rs.getInt("qno"), rs.getInt("countCmt"));
+    }
+    //System.out.println(cmtMap);
     con.close(rs, pstmt, conn);
 %>
 <!DOCTYPE html>
@@ -56,9 +65,9 @@
     <style>
         /* 본문 영역 스타일 */
         .wrap { background-color: #fffcf2; }
-        .contents { clear:both; min-height:100vh;
+        .contents { clear:both; min-height:130vh;
             background-image: url("../images/bg_visual_overview.jpg");
-            background-repeat: no-repeat; background-position:center -250px; height: 1400px; }
+            background-repeat: no-repeat; background-position:center -250px; /*height: 1400px;*/ }
         .contents::after { content:""; clear:both; display:block; width:100%; }
 
         .page { clear:both; width: 100vw; height: 100vh; position:relative; }
@@ -93,6 +102,13 @@
         .inbtn:last-child { float:right; }
         .reply { padding-left:14px; }
         .reply img { margin:-2px; padding-right: 7px; }
+        .replyNum { margin-left: 10px; font-size: 14px; font-weight: 700; color: #dc3545 }
+
+        .dataTables_wrapper {
+            position: relative;
+            clear: both;
+            margin-top: 70px;
+        }
     </style>
     <link rel="stylesheet" href="../ft.css">
     <style>
@@ -116,7 +132,7 @@
             <section class="page" id="page1">
                 <div class="page_wrap">
                     <h2 class="page_tit">질문 및 답변 목록</h2>
-                    <br><br><hr><br><br>
+                    <hr>
                     <table class="tb1" id="myTable">
                         <thead>
                         <tr>
@@ -134,21 +150,31 @@
                             for (Qna q : qnaList) {
                                 Date d = ymd.parse(q.getResdate());
                                 String date = ymd.format(d);
+                                int cmtNum = cmtMap.get(q.getQno());
                         %>
                         <tr>
-                            <td class="item1"><%=tot %></td>
+                            <td class="item1"><%=tot %>
+                            </td>
                             <td class="item2">
                                 <% if (q.getLev() == 0) { %>
-                                <a href="/qna/getQna.jsp?qno=<%=q.getQno()%>"><%=q.getTitle() %></a>
+                                <a href="/qna/getQna.jsp?qno=<%=q.getQno()%>"><%=q.getTitle() %>
+                                </a>
                                 <% } else { %>
                                 <a class="reply" href="/qna/getQna.jsp?qno=<%=q.getQno()%>">
                                     <img src="../images/icon_reply.png" alt="[답변]"><%=q.getTitle() %>
                                 </a>
                                 <% } %>
+
+                                <% if (cmtNum > 0) { %>
+                                <span class="replyNum"><%=cmtNum %></span>
+                                <% } %>
                             </td>
-                            <td class="item3"><%=q.getName() %></td>
-                            <td class="item4"><%=date %></td>
-                            <td class="item5"><%=q.getCnt() %></td>
+                            <td class="item3"><%=q.getName() %>
+                            </td>
+                            <td class="item4"><%=date %>
+                            </td>
+                            <td class="item5"><%=q.getCnt() %>
+                            </td>
                         </tr>
                         <%
                                 tot--;
@@ -157,9 +183,9 @@
                         </tbody>
                     </table>
                     <script>
-                        $(document).ready(function(){
+                        $(document).ready(function () {
                             $("#myTable").DataTable({
-                                order:[[0, "desc"]]
+                                order: [[0, "desc"]]
                             });
                         });
                     </script>
