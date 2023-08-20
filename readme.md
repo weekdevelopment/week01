@@ -14,7 +14,7 @@
 
 ❓ FAQs: 고객만족센터 - 자주하는질문, 자료실
 
-👥 Join Our Team: 인재채용 - 윜크루 되기, 윜크로 되면
+👥 Join Our Team: 인재채용 - 윜크루 되기, 윜크루 되면
 
 📝 Contact Us: 1:1문의
 
