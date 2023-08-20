@@ -27,7 +27,7 @@
         session.invalidate();
         if (mode == 0) {
             out.println("<script>alert('회원을 삭제하였습니다.');");
-            out.println("location.href='/member/admin.jsp';</script>");
+            out.println("location.href='/member/admin/admin.jsp';</script>");
         } else {
             out.println("<script>alert('탈퇴가 완료되었습니다.');");
             out.println("location.href='/';</script>");
