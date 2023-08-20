@@ -58,22 +58,27 @@ html, css, javascript로 작성하였습니다. <br>
 
 ## 개념적 설계
 ![개념적 설계](./readmeimage/usecase.png "개념적 설계")
+<br>
 ## 논리적 설계
 ![논리적 설계](./readmeimage/논리적설계.png "논리적 설계")
+<br>
 ## 물리적 설계
 ![물리적 설계](./readmeimage/물리적설계.png "물리적 설계")
+<br>
 ## 클래스 다이어그램
 ![클래스 다이어그램](./readmeimage/classdiagram.png "클래스 다이어그램")
+<br>
 ## Table
 ![테이블 구현](./readmeimage/dbtables.png "테이블 구현")
 ![테이블 구현](./readmeimage/tableERD.png "테이블 구현")
+<br>
 
 ## 기능흐름도 (Unit Task Flow)
 ![unitTaskFlow](./readmeimage/기능흐름도.png "unitTaskFlow")
-
-## HOME
+<br>
+## OVEN HOME
 ![home](./readmeimage/oven.jpg "헤더")
-## 오븐을 보고 HOME의 CSS를 구현해보았습니다!
+## 실제 HOME
 ![헤더](./readmeimage/home.png "헤더")
 <br>
 
@@ -92,12 +97,14 @@ html, css, javascript로 작성하였습니다. <br>
 #### • 정보 수정 시 "전화번호"와 "이메일"만 수정 가능
 #### • 비밀번호는 보안 상 변경 불가
 #### • 자진 회원탈퇴 기능 구현
+<br>
 
 ## Company
 ![회사소개](./readmeimage/company.png "회사소개")
 #### 회사소개
 #### • 정적 콘텐츠로 WEEK에 대한 소개 페이지
 #### • "윜이란" 페이지 내에서 마우스 스크롤 또는 상단 버튼 클릭을 통해 WEEK STORY로 이동 가능
+<br>
 
 ## Board
 ![공지사항](./readmeimage/board.png "공지사항")
@@ -106,12 +113,14 @@ html, css, javascript로 작성하였습니다. <br>
 #### • 로그인을 하지 않아도 공지사항을 열람할 수 있음
 #### • 관리자 계정으로 로그인 시에 공지사항 글 작성, 수정, 삭제가 가능함
 #### • 글 수정 또는 삭제 후 공지사항 글목록으로 redirection
+<br>
 
 ## Messcom
 ![언론보도](./readmeimage/messcom.JPG "언론보도")
 #### 언론보도
 #### • 리스트의 기사제목을 클릭하면 DB에서 링크 데이터를 불러와 해당 기사페이지로 이동
 #### • 관리자로 로그인 시에, 언론보도 등록 가능
+<br>
 
 ## 고객만족센터
 ![자주하는질문](./readmeimage/faq.png "자주하는질문")
@@ -122,14 +131,15 @@ html, css, javascript로 작성하였습니다. <br>
 #### • 글 수정 또는 삭제 후 공지사항 글목록으로 redirection
 <br>
 
+## 1:1 문의
 ![1:1](./readmeimage/Qna.png "자주하는질문")
-#### 1:1 문의
 #### • Qna 테이블에서 리스트를 불러와 출력
 #### • 로그인을 하지 않아도 모든 글/댓글의 열람은 가능하나 글/댓글 작성은 불가능함
 #### • 모든 회원은 1:1문의 게시판에서 글/댓글 작성이 가능함
 #### • 글 수정/삭제는 그 글의 작성자 또는 관리자만 가능함
 #### • 댓글 삭제는 그 댓글의 작성자 또는 관리자만 가능함 (댓글 수정은 미구현)
 #### • 로그인을 하지 않고 댓글창을 클릭한 경우 자동으로 로그인 화면으로 이동함
+<br>
 
 ## 인재채용
 ![crew](./readmeimage/crew.png "crew")
@@ -137,8 +147,9 @@ html, css, javascript로 작성하였습니다. <br>
 #### • 이력서 지원 form으로 지원하기 버튼을 클릭 시 weekcrew 테이블에 INSERT
 #### 윜크루 되면
 #### • 정적 콘텐츠로 WEEK의 직원 복지 소개 페이지
+<br>
 
-#### 관리자페이지
+## 관리자페이지
 ![admin](./readmeimage/admin.png "admin")
 #### 관리자페이지
 #### 회원정보 관리
@@ -156,6 +167,7 @@ html, css, javascript로 작성하였습니다. <br>
 #### • weekcrew 테이블에서 지원 목록을 SELECT
 #### • 관리자는 원하는 지원서를 삭제할 수 있음
 #### • 지원서 삭제 후 윜크루 지원서 관리 페이지로 redirection
+<br>
 
 ![admin](./readmeimage/Out.png "admin")
 #### 탈퇴 및 강퇴
