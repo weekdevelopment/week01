@@ -73,28 +73,25 @@ html, css, javascript로 작성하였습니다. <br>
 
 ## HOME
 ![home](./readmeimage/oven.jpg "헤더")
+##### 오븐을 보고 HOME의 CSS를 구현해보았습니다!
 ![헤더](./readmeimage/home.png "헤더")
 <br>
-![풋터](./img/index/footer.png "풋터")
-![로그인페이지](./img/login.png "로그인 페이지")
-![회원약관 페이지](./img/term.png "회원약관 페이지")
-![회원가입 페이지](./img/join.png "회원가입 페이지")
-![회원정보 페이지](./img/mypage.png "회원정보 페이지")
-![회사소개](./img/company_introduce.png "회사소개 첫 번째")
-![회사소개](./img/company_social.png "회사소개 두 번째")
-![회사소개](./img/company_weekstory.png "회사소개 세 번째")
-![공지사항](./img/notice_1.png "공지사항 글 목록")
-![공지사항](./img/notice_2.png "공지사항 글 쓰기")
-![공지사항](./img/notice_3.png "공지사항 글 보기")
-![공지사항](./img/notice_4.png "공지사항 글 수정")
-### ♣ 언론보도 : 리스트를 클릭하면 DB에서 제목과 링크 데이터를 불러와 해당 기사페이지로 이동합니다.
-![언론보도](./week01/img/masscom.png "언론보도 리스트")
-![1:1문의](./img/qnaList.png "1:1문의 리스트")
-![1:1문의](./img/getQna.png "1:1문의 보기")
-![1:1문의](./img/addQuestion.png "1:1문의하기")
-![자료실](./img/archive.png "자료실 페이지")
-![FAQ](./img/faq.png "FAQ")
-![인재채용](./img/weekcrew_1.png "윜크루 되면")
-![인재채용](./img/weekcrew_2.png "지원하기")
-![인재채용](./img/weekcrew_3.png "지원완료")
-![찾아오시는 길](./img/map.png "찾아오시는 길")
+
+## MEMBER
+![멤버](./readmeimage/members.png "멤버")
+#### 회원가입
+#### • 회원 약관에 동의 시 회원가입 가능
+#### • 아이디 중복 체크가 완료 후에 가입 가능
+#### • 비밀번호와 비밀번호 확인의 값이 일치해야 최종 회원가입 성공
+#### • 비밀번호는 SHA-256 방식으로 암호화하였음
+#### 로그인
+#### • DB에서 비밀번호를 불러와 비교 후 로그인 성공 또는 실패
+#### • 일반 회원과 달리 "admin" 관리자 계정으로 로그인 시에는 "관리자페이지" 접속 가능
+#### 마이페이지
+#### • 회원 정보 확인
+#### • 정보 수정 시 "전화번호"와 "이메일"만 수정 가능
+#### • 비밀번호는 보안 상 변경 불가
+#### • 자진 회원탈퇴 기능 구현
+
+
+
