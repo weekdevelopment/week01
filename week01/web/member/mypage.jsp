@@ -156,7 +156,7 @@
                         function withdraw(memId) {
                             var flag = confirm("정말로 탈퇴하시겠습니까?");
                             if (flag) {
-                                window.location.href = "/member/delMember.jsp?id="+memId+"&mode=1";
+                                location.href = "/member/delMember.jsp?id="+memId+"&mode=1";
                             }
                         }
                     </script>

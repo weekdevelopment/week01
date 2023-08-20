@@ -202,7 +202,7 @@
                             function kickMember(memId) {
                                 var flag = confirm("정말로 이 회원을 강퇴하시겠습니까?");
                                 if (flag) {
-                                    window.location.href = "/member/delMember.jsp?id="+memId+"&mode=0";
+                                    location.href = "/member/delMember.jsp?id="+memId+"&mode=0";
                                 }
                             }
                         </script>

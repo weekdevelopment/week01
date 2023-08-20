@@ -139,6 +139,11 @@
         .comment-info { margin-bottom: 10px; }
         /*.comment-content { white-space: pre-line; !* 줄바꿈 유지 *! }*/
         .comment-date { margin-left: 20px; font-size: 13px;  color: #777; }
+
+        .del {
+            margin-left: 15px; font-size: 12px; color: #f44336; cursor: pointer;
+        }
+        .del:hover { text-decoration: underline; }
     </style>
     <link rel="stylesheet" href="../ft.css">
 </head>
@@ -235,7 +240,14 @@
                         <tr>
                             <td>
                                 <div class="comment-info">
-                                    <span><%=c.getAuthor() %></span> <span class="comment-date"><%=c.getResdate() %></span>
+                                    <span><%=c.getAuthor() %></span>
+                                    <span class="comment-date"><%=c.getResdate() %></span>
+                                    <% if(sid!=null && (sid.equals("admin") || sid.equals(c.getAuthor()))) { %>
+                                    <%--<span class="del">삭제</span>--%>
+                                    <%--<a href="withdraw('<%=mem.getId() %>')" class="inbtn">회원탈퇴</a>--%>
+                                    <%--<a href="/comment/delCommentPro.jsp?qno=<%=qno%>&cno=<%=c.getCno()%>" class="del">삭제</a>--%>
+                                    <a href="javascript:withdraw('<%=qna.getQno() %>')" class="del">삭제</a>
+                                    <% } %>
                                 </div>
                                 <div class="comment-content"><%=c.getContent() %></div>
                             </td>
@@ -244,6 +256,14 @@
                             }
                         %>
                     </table>
+                    <script>
+                        function delComment(memId) {
+                            var flag = confirm("댓글을 삭제하시겠습니까?");
+                            if (flag) {
+                                location.href = "/comment/delCommentPro.jsp";
+                            }
+                        }
+                    </script>
 
                     <%
                         boolean isLoggedIn = sid != null;

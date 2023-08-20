@@ -5,11 +5,8 @@
 <%@ include file="../encoding.jsp" %>
 <%
     //2. 보내온 데이터 받기
-    //int qno = Integer.parseInt(request.getParameter("qno"));
     String id = request.getParameter("id");
     int mode = Integer.parseInt(request.getParameter("mode"));
-    System.out.println(id);
-    System.out.println(mode);
 
     //3. DB 연결
     Connection conn = null;
