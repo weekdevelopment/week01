@@ -58,24 +58,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>공지사항 목록</title>
-    <%@ include file="../head.jsp" %>
+    <%@ include file="../../head.jsp" %>
     <!-- 스타일 초기화 : reset.css 또는 normalize.css -->
     <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" rel="stylesheet">
 
     <!-- 필요한 폰트를 로딩 : 구글 웹 폰트에서 폰트를 선택하여 해당 내용을 붙여 넣기 -->
-    <link rel="stylesheet" href="../google.css">
-    <link rel="stylesheet" href="../fonts.css">
+    <link rel="stylesheet" href="../../google.css">
+    <link rel="stylesheet" href="../../fonts.css">
 
     <!-- 필요한 플러그인 연결 -->
     <script src="https://code.jquery.com/jquery-latest.js"></script>
-    <link rel="stylesheet" href="../common.css">
-    <link rel="stylesheet" href="../hd.css">
+    <link rel="stylesheet" href="../../common.css">
+    <link rel="stylesheet" href="../../hd.css">
     <style>
         /* 본문 영역 스타일 */
         .wrap { background-color: #fffcf2; }
-        .contents { clear:both; min-height:1800px;
-            background-image: url("../images/bg_visual_overview.jpg");
-            background-repeat: no-repeat; background-position:center -250px; height: 1400px; }
+        .contents { clear:both; min-height:800px;
+            background-image: url("../../weekcrew/images/library.jpg");
+            background-repeat: no-repeat; background-position:center -250px; }
         .contents::after { content:""; clear:both; display:block; width:100%; }
 
         .page { clear:both; width: 100vw; height: 100vh; position:relative; }
@@ -99,28 +99,14 @@
             border-bottom:1px solid #f5be8b;
             border-top:1px solid #f5be8b; }
 
-        .tb1 .item1 { width:15%; text-align: center; }
+        .tb1 .item1 { width:10%; text-align: center; }
         .tb1 .item2 { width:15%; text-align: center; max-width: 50px; overflow: hidden;}
         .tb1 .item3 { width:10%; text-align: center; }
         .tb1 .item4 { width:15%; text-align: center; }
         .tb1 .item5 { width:15%; text-align: center; }
         .tb1 .item6 { width:15%; text-align: center; }
         .tb1 .item7 { width:10%; text-align: center; }
-        .tb1 .kick { width:5%; text-align: center; }
-
-        .tb1 .item8 { width:5%; text-align: center;  max-width: 100px;
-            padding: 0 20px;
-            overflow: hidden;}
-        .tb1 .item9 { width:15%; text-align: center;
-            max-width: 150px;
-            padding: 0 20px;
-            overflow: hidden;}
-        .tb1 .item10 { width:40%; text-align: center;
-            overflow: hidden;
-            max-width: 200px;}
-        .tb1 .item11 { width:40%; text-align: center;
-            overflow: hidden;
-            max-width: 200px;}
+        .tb1 .kick { width:10%; text-align: center; }
 
         h3 {
             clear: both;
@@ -133,11 +119,23 @@
             color: #f5be8b;}
     </style>
 
-    <link rel="stylesheet" href="../ft.css">
+    <link rel="stylesheet" href="../../ft.css">
     <style>
         .btn_group { clear:both; width:800px; margin:20px auto; }
         .btn_group:after { content:""; display:block; width:100%; clear: both; }
         .btn_group p {text-align: center;   line-height:3.6; }
+        .inbtn {
+            display: block;
+            border-radius: 100px;
+            min-width: 56px;
+            text-align: center;
+            line-height: 21px;
+            background-color: #f5be8b;
+            color: #fff;
+            font-size: 14px;
+            margin: auto;
+            border-color: #f5be8b;
+        }
     </style>
 
 </head>
@@ -145,18 +143,17 @@
 <div class="container">
     <div class="wrap">
         <header class="hd" id="hd">
-            <%@ include file="../header.jsp" %>
+            <%@ include file="../../header.jsp" %>
         </header>
         <div class="contents" id="contents">
             <div class="breadcrumb">
-                <p><a href="">HOME</a> &gt; <span>관리자 페이지</span></p>
+                <p><a href="">HOME</a> &gt; <span>관리자 페이지</span> &gt; <span>회원정보 관리</span></p>
             </div>
             <section class="page" id="page1">
                 <div class="page_wrap">
-                    <h2 class="page_tit">관리자 페이지</h2>
+                    <h2 class="page_tit">회원정보 관리</h2>
                     <hr>
                     <div class="member">
-                        <h3 class="mem">회원 정보</h3>
                         <table class="tb1" id="myTable">
                             <thead>
                             <tr>
@@ -191,7 +188,7 @@
                                 <td class="item5"><%=m.getEmail() %></td>
                                 <td class="item6"><%=date %></td>
                                 <td class="item7"><%=m.getPoint()%></td>
-                                <td class="kick"><button onclick="kickMember('<%=m.getId() %>')">탈퇴</button></td>
+                                <td class="kick"><button class="inbtn" onclick="kickMember('<%=m.getId() %>')">탈퇴</button></td>
                             </tr>
                             <%
                                 }
@@ -207,39 +204,11 @@
                             }
                         </script>
                     </div>
-                    <div class="weekcrew">
-                        <h3 class="wc">윜크루 지원 현황</h3>
-                        <table class="tb1" id="myTable2">
-                            <thead>
-                            <tr>
-                                <th class="item8">이름</th>
-                                <th class="item9">이메일</th>
-                                <th class="item10">지원 문항 1</th>
-                                <th class="item11">지원 문항 2</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-
-                            <%
-                                for (Weekcrew w : wcList) {
-                            %>
-                            <tr>
-                                <td class="item8"><%=w.getName() %></td>
-                                <td class="item9"><%=w.getEmail() %></td>
-                                <td class="item10"><%=w.getContent() %></td>
-                                <td class="item11"><%=w.getContent2() %></td>
-                            </tr>
-                            <%
-                                }
-                            %>
-                            </tbody>
-                        </table>
-                    </div>
                 </div>
             </section>
         </div>
         <footer class="ft" id="ft">
-            <%@ include file="../footer.jsp" %>
+            <%@ include file="../../footer.jsp" %>
         </footer>
     </div>
 </div>

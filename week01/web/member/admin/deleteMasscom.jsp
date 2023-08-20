@@ -7,8 +7,7 @@
     response.setContentType("text/html; charset=UTF-8");
     response.setCharacterEncoding("UTF-8");
 
-    int bno = Integer.parseInt(request.getParameter("bno"));
-    int mode = Integer.parseInt(request.getParameter("mode"));
+    int mno = Integer.parseInt(request.getParameter("mno"));
 
     Connection conn = null;
     PreparedStatement pstmt = null;
@@ -19,19 +18,17 @@
         System.out.println("DB 연결 성공");
     }
 
-    String sql = "delete from board where bno=?";
+    String sql = "delete from masscom where mno=?";
     pstmt = conn.prepareStatement(sql);
-    pstmt.setInt(1, bno);
+    pstmt.setInt(1, mno);
     int cnt = pstmt.executeUpdate();
 
     if ( cnt >0 ){
-        if (mode==0) {
-            response.sendRedirect("/board/boardList.jsp");
-        } else {
-            response.sendRedirect("/member/admin/adminBoard.jsp");
-        }
+        out.println("<script>alert('기사 삭제 성공.');");
+        response.sendRedirect("/member/admin/adminMasscom.jsp");
     } else {
-        response.sendRedirect("/board/getBoard.jsp?bno="+bno);
+        out.println("<script>alert('기사 삭제 실패.');");
+        response.sendRedirect("/member/admin/adminMasscom.jsp");
     }
 
     con.close(pstmt,conn);

@@ -7,8 +7,7 @@
     response.setContentType("text/html; charset=UTF-8");
     response.setCharacterEncoding("UTF-8");
 
-    int bno = Integer.parseInt(request.getParameter("bno"));
-    int mode = Integer.parseInt(request.getParameter("mode"));
+    int wid = Integer.parseInt(request.getParameter("wid"));
 
     Connection conn = null;
     PreparedStatement pstmt = null;
@@ -19,19 +18,17 @@
         System.out.println("DB 연결 성공");
     }
 
-    String sql = "delete from board where bno=?";
+    String sql = "delete from weekcrew where wid=?";
     pstmt = conn.prepareStatement(sql);
-    pstmt.setInt(1, bno);
+    pstmt.setInt(1, wid);
     int cnt = pstmt.executeUpdate();
 
     if ( cnt >0 ){
-        if (mode==0) {
-            response.sendRedirect("/board/boardList.jsp");
-        } else {
-            response.sendRedirect("/member/admin/adminBoard.jsp");
-        }
+        out.println("<script>alert('지원서 삭제 성공.');");
+        response.sendRedirect("/member/admin/adminWeekcrew.jsp");
     } else {
-        response.sendRedirect("/board/getBoard.jsp?bno="+bno);
+        out.println("<script>alert('지원서 삭제 실패.');");
+        response.sendRedirect("/member/admin/adminWeekcrew.jsp");
     }
 
     con.close(pstmt,conn);

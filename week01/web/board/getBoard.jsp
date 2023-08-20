@@ -60,7 +60,7 @@
         /* 본문 영역 스타일 */
         .wrap { background-color: #fffcf2; }
         .contents { clear:both; min-height:800px;
-            background-image: url("../images/bg_visual_overview.jpg");
+            background-image: url("../weekcrew/images/library.jpg");
             background-repeat: no-repeat; background-position:center -250px; }
         .contents::after { content:""; clear:both; display:block; width:100%; }
 
@@ -145,8 +145,8 @@
                             <%
                                 if (sid !=null && sid.equals("admin")) {
                             %>
-                            <a href="/board/updateBoard.jsp?bno=<%=bd.getBno() %>" class="inbtn">글 수정</a>
-                            <a href="/board/delBoard.jsp?bno=<%=bd.getBno() %>" class="inbtn">글 삭제</a>
+                            <a href="/board/updateBoard.jsp?bno=<%=bd.getBno() %>&mode=1" class="inbtn">글 수정</a>
+                            <a href="/board/delBoard.jsp?bno=<%=bd.getBno() %>&mode=0" class="inbtn">글 삭제</a>
                             <%
                             }
                             %>

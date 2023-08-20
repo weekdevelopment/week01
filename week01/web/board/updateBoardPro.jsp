@@ -10,11 +10,12 @@
     int bno = Integer.parseInt(request.getParameter("bno"));
     String title = request.getParameter("title");
     String content = request.getParameter("content");
+    int mode = Integer.parseInt(request.getParameter("mode"));
 
     Connection conn = null;
     PreparedStatement pstmt = null;
     int cnt=0;
-
+    System.out.println(mode);
 
     DBC con = new MariaDBCon();
     conn = con.connect();
@@ -30,7 +31,11 @@
     cnt = pstmt.executeUpdate();
 
     if ( cnt>0){
-        response.sendRedirect("/board/boardList.jsp");
+        if (mode==0) {
+            response.sendRedirect("/member/admin/adminBoard.jsp");
+        } else {
+            response.sendRedirect("/board/boardList.jsp");
+        }
     } else {
         response.sendRedirect("/board/updateBoard.jsp?=bno"+bno);
     }

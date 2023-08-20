@@ -8,6 +8,7 @@
     PreparedStatement pstmt = null;
     ResultSet rs = null;
     int bno = Integer.parseInt(request.getParameter("bno"));
+    int mode = Integer.parseInt(request.getParameter("mode"));
     DBC con = new MariaDBCon();
     conn = con.connect();
     if (conn != null) {
@@ -18,7 +19,6 @@
     pstmt = conn.prepareStatement(sql);
     pstmt.setInt(1, bno);
     rs = pstmt.executeQuery();
-
     Board bd =new Board();
     if ( rs.next()){
         bd.setBno(rs.getInt("bno"));
@@ -53,7 +53,7 @@
         /* 본문 영역 스타일 */
         .wrap { background-color: #fffcf2; }
         .contents { clear:both; min-height:100vh;
-            background-image: url("../images/bg_visual_overview.jpg");
+            background-image: url("../weekcrew/images/library.jpg");
             background-repeat: no-repeat; background-position:center -250px; }
         .contents::after { content:""; clear:both; display:block; width:100%; }
 
@@ -111,7 +111,10 @@
                     <tbody>
                     <tr>
                         <th>글 번호</th>
-                        <td><input type="text" name="bno" id="bno" class="indata" readonly value="<%=bd.getBno() %>"/></td>
+                        <td><input type="text" name="bno" id="bno" class="indata" readonly value="<%=bd.getBno() %>"/>
+                            <input type="hidden" name="mode" id="mode" class="indata" value="<%=mode %>" />
+                        </td>
+
                     </tr>
                     <tr>
                         <th>글 제목</th>
