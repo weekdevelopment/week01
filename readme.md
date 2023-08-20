@@ -72,7 +72,7 @@ html, css, javascript로 작성하였습니다. <br>
 ![unitTaskFlow](./readmeimage/기능흐름도.png "unitTaskFlow")
 
 ## HOME
-![home](./readmeimage/oven.png "헤더")
+![home](./readmeimage/oven.jpg "헤더")
 ![헤더](./readmeimage/home.png "헤더")
 <br>
 ![풋터](./img/index/footer.png "풋터")
