@@ -44,12 +44,18 @@ html, css, javascript로 작성하였습니다. <br>
 굳이 메뉴에 들어가지 않고도 메인 홈페이지만으로 Week가 한 눈에 보일 수 있도록 CSS를 구현하였습니다.<br>
 
 ## 프로젝트 설계
-![개념적 설계](./newimage/그림_2.png)
-![개념적 설계](./newimage/요구사항2.png)
-![개념적 설계](./newimage/요구사항3.png)
-![개념적 설계](./newimage/요구사항4-1.png)
-![개념적 설계](./newimage/요구사항4-2.png)
-![개념적 설계](./newimage/요구사항5.png)
+![개념적 설계](./readmeimage/요구사항1.png)
+![개념적 설계](./readmeimage/요구사항2.png)
+![개념적 설계](./readmeimage/요구사항3.png)
+![개념적 설계](./readmeimage/요구사항4.png)
+![개념적 설계](./readmeimage/요구사항5.png)
+![개념적 설계](./readmeimage/요구사항6.png)
+![개념적 설계](./readmeimage/요구사항7.png)
+![개념적 설계](./readmeimage/요구사항8.png)
+![개념적 설계](./readmeimage/요구사항9.png)
+![개념적 설계](./readmeimage/요구사항10.png)
+<br>
+
 ![개념적 설계](./newimage/usecase.png "개념적 설계")
 ![논리적 설계](./img/database/erd_01.png "논리적 설계")
 ![물리적 설계](./img/database/erd_02.png "물리적 설계")
