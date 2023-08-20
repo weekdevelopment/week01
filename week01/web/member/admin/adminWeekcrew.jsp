@@ -145,7 +145,6 @@
                     <h2 class="page_tit">윜크루 지원 관리</h2>
                     <hr>
                     <div class="weekcrew">
-                        <h3 class="wc">윜크루 지원 현황</h3>
                         <table class="tb1" id="myTable2">
                             <thead>
                             <tr>
