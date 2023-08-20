@@ -74,10 +74,7 @@ html, css, javascript로 작성하였습니다. <br>
 ## HOME
 ![home](./readmeimage/oven.png "헤더")
 ![헤더](./readmeimage/home.png "헤더")
-![메인페이지](./img/index/home1.png "메인페이지 첫 번째")
-![메인페이지](./img/index/home2.png "메인페이지 두 번째")
-![메인페이지](./img/index/companybutton.png "메인페이지 세 번째")
-![메인페이지](./img/index/weeksummary.png "메인페이지 네 번째")
+<br>
 ![풋터](./img/index/footer.png "풋터")
 ![로그인페이지](./img/login.png "로그인 페이지")
 ![회원약관 페이지](./img/term.png "회원약관 페이지")
