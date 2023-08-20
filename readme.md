@@ -55,8 +55,7 @@ html, css, javascript로 작성하였습니다. <br>
 ![개념적 설계](./readmeimage/9.png)
 ![개념적 설계](./readmeimage/10.png)
 <br>
-
-![개념적 설계](./newimage/usecase.png "개념적 설계")
+![개념적 설계](./readmeimage/usecase.png "개념적 설계")
 ![논리적 설계](./img/database/erd_01.png "논리적 설계")
 ![물리적 설계](./img/database/erd_02.png "물리적 설계")
 ![클래스 다이어그램](./img/database/classdiagram.png "클래스 다이어그램")
