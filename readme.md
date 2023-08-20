@@ -55,9 +55,12 @@ html, css, javascript로 작성하였습니다. <br>
 ![개념적 설계](./readmeimage/9.png)
 ![개념적 설계](./readmeimage/10.png)
 <br>
+개념적 설계 <br>
 ![개념적 설계](./readmeimage/usecase.png "개념적 설계")
-![논리적 설계](./img/database/erd_01.png "논리적 설계")
-![물리적 설계](./img/database/erd_02.png "물리적 설계")
+논리적 설계 <br>
+![논리적 설계](./readmeimage/논리적설계.png "논리적 설계")
+물리적 설계 <br>
+![물리적 설계](./readmeimage/물리적설계.png "물리적 설계")
 ![클래스 다이어그램](./img/database/classdiagram.png "클래스 다이어그램")
 ![테이블 구현](./img/database/dbtables.png "테이블 구현")
 ![테이블 구현](./img/database/tableERD.png "테이블 구현")
