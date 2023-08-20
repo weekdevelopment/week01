@@ -111,7 +111,7 @@
             float:left; margin-right: 20px; margin-top: 10px; }
         .inbtn:last-child { float:right; }
 
-        .comment-form { margin: 5px 165px;
+        .comment-form { margin: 5px 160px;
             border: 1px solid #ccc; padding: 10px; border-radius: 5px; width: 900px;
         }
         .comment-form textarea {
@@ -124,11 +124,6 @@
             color: white; border: none; border-radius: 5px; cursor: pointer;
         }
 
-        .comment-list {
-            margin: 20px 165px;
-            border: 1px solid #ccc; padding: 10px; border-radius: 5px; width: 920px;
-        }
-
         .comment-table { width: 77%; border-collapse: collapse; margin: 20px 160px }
         .comment-table th, .comment-table td {
             padding: 10px;
@@ -136,9 +131,13 @@
             border-bottom: 1px solid #ddd;
         }
         .comment-table th { background-color: #f5be8b; color: #fff }
+
         .comment-info { margin-bottom: 10px; }
-        /*.comment-content { white-space: pre-line; !* 줄바꿈 유지 *! }*/
         .comment-date { margin-left: 20px; font-size: 13px;  color: #777; }
+        .comment-write {
+            margin-top: 7px; padding: 5px; background-color: #f5be8b; color: #fff;
+            border: none;
+        }
 
         .del {
             margin-left: 15px; font-size: 12px; color: #f44336; cursor: pointer;
@@ -185,11 +184,7 @@
                         <tr>
                             <th>작성자</th>
                             <td>
-                                <% if(sid!=null && sid.equals("admin")) { %>
-                                <span title="<%=qna.getAuthor()%>"><%=qna.getName() %></span>
-                                <% } else { %>
-                                <span><%=qna.getName() %></span>
-                                <% } %>
+                                <%=qna.getName() %>
                             </td>
                         </tr>
                         <tr>
@@ -243,10 +238,7 @@
                                     <span><%=c.getAuthor() %></span>
                                     <span class="comment-date"><%=c.getResdate() %></span>
                                     <% if(sid!=null && (sid.equals("admin") || sid.equals(c.getAuthor()))) { %>
-                                    <%--<span class="del">삭제</span>--%>
-                                    <%--<a href="withdraw('<%=mem.getId() %>')" class="inbtn">회원탈퇴</a>--%>
-                                    <%--<a href="/comment/delCommentPro.jsp?qno=<%=qno%>&cno=<%=c.getCno()%>" class="del">삭제</a>--%>
-                                    <a href="javascript:withdraw('<%=qna.getQno() %>')" class="del">삭제</a>
+                                    <a href="javascript:delComment('<%=c.getQno() %>', '<%=c.getCno() %>')" class="del">삭제</a>
                                     <% } %>
                                 </div>
                                 <div class="comment-content"><%=c.getContent() %></div>
@@ -257,10 +249,10 @@
                         %>
                     </table>
                     <script>
-                        function delComment(memId) {
+                        function delComment(qno, cno) {
                             var flag = confirm("댓글을 삭제하시겠습니까?");
                             if (flag) {
-                                location.href = "/comment/delCommentPro.jsp";
+                                location.href = "/comment/delCommentPro.jsp?qno="+qno+"&cno="+cno;
                             }
                         }
                     </script>
@@ -275,7 +267,7 @@
                         </div>
                         <div class="comment-submit">
                             <% if (isLoggedIn) { %>
-                            <input type="submit" value="댓글 작성">
+                            <input type="submit" class="comment-write" value="댓글 작성">
                             <% } else { %>
                             <a href="/member/login.jsp" class="login-link">로그인</a>
                             <% } %>
