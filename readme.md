@@ -55,8 +55,10 @@ html, css, javascript로 작성하였습니다. <br>
 ![개념적 설계](./readmeimage/9.png)
 ![개념적 설계](./readmeimage/10.png)
 <br>
-개념적 설계 <br>
-![개념적 설계](./readmeimage/usecase.png "개념적 설계")
+<style>
+  .readmeimage/usecase.png {image-aline:center;}
+</style>
+![개념적 설계](./readmeimage/usecase.png "개념적 설계") image-aline:center;
 논리적 설계 <br>
 ![논리적 설계](./readmeimage/논리적설계.png "논리적 설계")
 물리적 설계 <br>
