@@ -57,7 +57,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>공지사항 목록</title>
+    <title></title>
     <%@ include file="../../head.jsp" %>
     <!-- 스타일 초기화 : reset.css 또는 normalize.css -->
     <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" rel="stylesheet">
@@ -138,6 +138,9 @@
         }
     </style>
 
+    <link rel="stylesheet" href="../../jquery.dataTables.css">
+    <script src="../../jquery.dataTables.js"></script>
+
 </head>
 <body>
 <div class="container">
@@ -195,6 +198,13 @@
                             %>
                             </tbody>
                         </table>
+                        <script>
+                            $(document).ready( function () {
+                                $('#myTable').DataTable({
+                                    order:[[0, "desc"]],
+                                });
+                            });
+                        </script>
                     </div>
                 </div>
             </section>

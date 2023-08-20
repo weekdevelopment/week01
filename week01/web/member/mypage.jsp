@@ -80,7 +80,7 @@
             width:1200px; margin: 0 auto; text-align: right; color:#fff;
             padding-top: 28px; padding-bottom: 28px; }
         .breadcrumb a { color:#fff; }
-        .tb1 { width:500px; margin:100px auto; }
+        .tb1 { width:600px; margin:100px auto; }
         .tb1 th { width: 100px; background-color: #f5be8b; height: 48px; margin-top: 50px; margin-bottom: 50px; color:#fff;}
         .tb1 td {  width: 300px;  line-height: 48px; padding-top:24px; padding-bottom:24px; padding-left: 20px; color: #f5be8b;
             max-width: 200px;
@@ -144,7 +144,7 @@
                             <td><%=mem.getPoint() %></td>
                         </tr>
                         <tr>
-                            <td colspan="2">
+                            <td colspan="3">
                                 <a href="/member/modify.jsp" class="inbtn">회원정보수정</a>
                                 <a href="javascript:withdraw('<%=mem.getId() %>')" class="inbtn">회원탈퇴</a>
                                 <a href="/" class="inbtn">메인으로</a>

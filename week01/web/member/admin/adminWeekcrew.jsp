@@ -129,6 +129,9 @@
         }
     </style>
 
+    <link rel="stylesheet" href="../../jquery.dataTables.css">
+    <script src="../../jquery.dataTables.js"></script>
+
 </head>
 <body>
 <div class="container">
@@ -172,6 +175,13 @@
                             %>
                             </tbody>
                         </table>
+                        <script>
+                            $(document).ready( function () {
+                                $('#myTable').DataTable({
+                                    order:[[0, "desc"]],
+                                });
+                            });
+                        </script>
                         <script>
                             function administerWC(wid) {
                                 window.location.href = "/member/admin/deleteWeekcrew.jsp?wid="+wid;

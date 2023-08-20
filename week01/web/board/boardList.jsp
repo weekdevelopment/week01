@@ -53,9 +53,9 @@
     <style>
         /* 본문 영역 스타일 */
         .wrap { background-color: #fffcf2; }
-        .contents { clear:both; min-height:130vh;
-            background-image: url("../weekcrew/images/library.jpg");
-            background-repeat: no-repeat; background-position:center -250px; }
+        .contents { clear:both; min-height:100vh;
+            background-image: url("../images/bg_visual_overview.jpg");
+            background-repeat: no-repeat; background-position:center -250px; height: 1400px; }
         .contents::after { content:""; clear:both; display:block; width:100%; }
 
         .page { clear:both; width: 100vw; height: 100vh; position:relative; }
@@ -93,7 +93,7 @@
         .dataTables_wrapper {
             position: relative;
             clear: both;
-            margin-top: 70px;
+            margin-top: 90px;
         }
     </style>
 

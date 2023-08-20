@@ -94,52 +94,52 @@
 </head>
 <body>
 <div class="container">
-<div class="wrap">
-    <header class="hd" id="hd">
-        <%@ include file="../header.jsp" %>
-    </header>
-    <div class="contents" id="contents">
-        <div class="breadscrumb">
-            <p><a href="">HOME</a> &gt <span>공지사항</span> &gt <span>공지사항 수정하기</span> </p>
-        </div>
-        <section class="page" id="page1">
-            <div class="page_wrap">
-                <h2 class="page_tit">공지사항 수정하기</h2>
-                <hr>
-                <form name="frm1" action="updateBoardPro.jsp" method="post">
-                <table class="tb1">
-                    <tbody>
-                    <tr>
-                        <th>글 번호</th>
-                        <td><input type="text" name="bno" id="bno" class="indata" readonly value="<%=bd.getBno() %>"/>
-                            <input type="hidden" name="mode" id="mode" class="indata" value="<%=mode %>" />
-                        </td>
-
-                    </tr>
-                    <tr>
-                        <th>글 제목</th>
-                        <td><input type="text" name="title" id="title" class="indata" required value="<%=bd.getTitle() %>"/></td>
-                    </tr>
-                    <tr>
-                        <th>글 내용</th>
-                        <td><input type="text" name="content" id="content" class="indata" value="<%=bd.getContent() %>"/></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" class="colspan">
-                            <input type="submit" value="글 수정" class="inbtn">
-                            <a href="/board/boardList.jsp" class="inbtn">글목록으로</a>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-                </form>
+    <div class="wrap">
+        <header class="hd" id="hd">
+            <%@ include file="../header.jsp" %>
+        </header>
+        <div class="contents" id="contents">
+            <div class="breadscrumb">
+                <p><a href="">HOME</a> &gt <span>공지사항</span> &gt <span>공지사항 수정하기</span> </p>
             </div>
-        </section>
+            <section class="page" id="page1">
+                <div class="page_wrap">
+                    <h2 class="page_tit">공지사항 수정하기</h2>
+                    <hr>
+                    <form name="frm1" action="updateBoardPro.jsp" method="post">
+                        <table class="tb1">
+                            <tbody>
+                            <tr>
+                                <th>글 번호</th>
+                                <td><input type="text" name="bno" id="bno" class="indata" readonly value="<%=bd.getBno() %>"/>
+                                    <input type="hidden" name="mode" id="mode" class="indata" value="<%=mode %>" />
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <th>글 제목</th>
+                                <td><input type="text" name="title" id="title" class="indata" required value="<%=bd.getTitle() %>"/></td>
+                            </tr>
+                            <tr>
+                                <th>글 내용</th>
+                                <td><input type="text" name="content" id="content" class="indata" value="<%=bd.getContent() %>"/></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="colspan">
+                                    <input type="submit" value="글 수정" class="inbtn">
+                                    <a href="/board/boardList.jsp" class="inbtn">글목록으로</a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+            </section>
+        </div>
+        <footer class="ft" id="ft">
+            <%@ include file="../footer.jsp" %>
+        </footer>
     </div>
-    <footer class="ft" id="ft">
-        <%@ include file="../footer.jsp" %>
-    </footer>
-</div>
 </div>
 </body>
 </html>

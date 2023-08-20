@@ -37,4 +37,13 @@ public class Masscom {
     public void setResdate(String resdate) {
         this.resdate = resdate;
     }
+    @Override
+    public String toString() {
+        return "Masscom{" +
+                "mno=" + mno +
+                ", title='" + title + '\'' +
+                ", link='" + link + '\'' +
+                ", resdate='" + resdate + '\'' +
+                '}';
+    }
 }
