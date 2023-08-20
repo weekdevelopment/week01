@@ -198,14 +198,6 @@
                             %>
                             </tbody>
                         </table>
-                        <script>
-                            function kickMember(memId) {
-                                var flag = confirm("정말로 이 회원을 강퇴하시겠습니까?");
-                                if (flag) {
-                                    location.href = "/member/delMember.jsp?id="+memId+"&mode=0";
-                                }
-                            }
-                        </script>
                     </div>
                     <div class="weekcrew">
                         <h3 class="wc">윜크루 지원 현황</h3>
@@ -243,5 +235,13 @@
         </footer>
     </div>
 </div>
+    <script>
+        function kickMember(memId) {
+            var flag = confirm("정말로 이 회원을 강퇴하시겠습니까?");
+            if (flag) {
+                location.href = "/member/delMember.jsp?id="+memId+"&mode=0";
+            }
+        }
+    </script>
 </body>
 </html>

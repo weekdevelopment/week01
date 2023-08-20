@@ -248,29 +248,28 @@
                             }
                         %>
                     </table>
-                    <script>
-                        function delComment(qno, cno) {
-                            var flag = confirm("댓글을 삭제하시겠습니까?");
-                            if (flag) {
-                                location.href = "/comment/delCommentPro.jsp?qno="+qno+"&cno="+cno;
-                            }
-                        }
-                    </script>
-
                     <%
                         boolean isLoggedIn = sid != null;
                     %>
                     <form action="/comment/addCommentPro.jsp" method="post" class="comment-form">
                         <div class="comment-input">
-                            <textarea name="content" placeholder="<%= isLoggedIn ? "댓글을 입력하세요..." : "로그인하세요" %>" rows="5"></textarea>
+                            <%
+                                if(isLoggedIn) {
+                            %>
+                            <textarea name="content" placeholder="댓글을 입력하세요..." rows="5"></textarea>
+                            <%
+                                } else {
+                            %>
+                            <textarea placeholder="댓글 쓰기 권한이 없습니다. 로그인 하시겠습니까?" rows="5" onclick="redirectToLogin()"></textarea>
+                            <%
+                                }
+                            %>
                             <input type="hidden" name="qno" id="qno" value="<%=qno %>">
                         </div>
                         <div class="comment-submit">
                             <% if (isLoggedIn) { %>
                             <input type="submit" class="comment-write" value="댓글 작성">
-                            <% } else { %>
-                            <a href="/member/login.jsp" class="login-link">로그인</a>
-                            <% } %>
+                            <% }  %>
                         </div>
                     </form>
                 </div>
@@ -281,5 +280,17 @@
         </footer>
     </div>
 </div>
+    <script>
+        function delComment(qno, cno) {
+            var flag = confirm("댓글을 삭제하시겠습니까?");
+            if (flag) {
+                location.href = "/comment/delCommentPro.jsp?qno=" + qno + "&cno=" + cno;
+            }
+        }
+
+        function redirectToLogin() {
+            location.href = "/member/login.jsp";
+        }
+    </script>
 </body>
 </html>
