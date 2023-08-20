@@ -71,8 +71,9 @@ html, css, javascript로 작성하였습니다. <br>
 ## 기능흐름도 (Unit Task Flow)
 ![unitTaskFlow](./readmeimage/기능흐름도.png "unitTaskFlow")
 
-## 기능 구현
-![헤더](./img/index/header.png "헤더")
+## HOME
+![home](./readmeimage/oven.png "헤더")
+![헤더](./readmeimage/home.png "헤더")
 ![메인페이지](./img/index/home1.png "메인페이지 첫 번째")
 ![메인페이지](./img/index/home2.png "메인페이지 두 번째")
 ![메인페이지](./img/index/companybutton.png "메인페이지 세 번째")
