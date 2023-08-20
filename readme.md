@@ -108,7 +108,7 @@ html, css, javascript로 작성하였습니다. <br>
 #### • 글 수정 또는 삭제 후 공지사항 글목록으로 redirection
 
 ## Messcom
-![언론보도](./readmeimage/messcom.png "언론보도")
+![언론보도](./readmeimage/messcom.jpg "언론보도")
 #### 언론보도
 #### • 리스트의 기사제목을 클릭하면 DB에서 링크 데이터를 불러와 해당 기사페이지로 이동
 #### • 관리자로 로그인 시에, 언론보도 등록 가능
