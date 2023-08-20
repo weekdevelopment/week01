@@ -69,7 +69,7 @@ html, css, javascript로 작성하였습니다. <br>
 ![테이블 구현](./readmeimage/tableERD.png "테이블 구현")
 
 ## 기능흐름도 (Unit Task Flow)
-![unitTaskFlow](./readmeimage.기능흐름도.png "unitTaskFlow")
+![unitTaskFlow](./readmeimage/기능흐름도.png "unitTaskFlow")
 
 ## 기능 구현
 ![헤더](./img/index/header.png "헤더")
