@@ -43,6 +43,8 @@ html, css, javascript로 작성하였습니다. <br>
 또, 홈페이지의 메인에 자회사인 "Weekly", "Weekend"로 바로 넘어갈 수 있는 버튼과 <br>
 굳이 메뉴에 들어가지 않고도 메인 홈페이지만으로 Week가 한 눈에 보일 수 있도록 CSS를 구현하였습니다.<br>
 
+![기능구현 동영상](./weekmp4.mp4)
+
 ## 프로젝트 설계
 ![개념적 설계](./readmeimage/1.png)
 ![개념적 설계](./readmeimage/2.png)
