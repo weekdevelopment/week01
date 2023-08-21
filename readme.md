@@ -46,7 +46,7 @@ html, css, javascript로 작성하였습니다. <br>
 
 ## 기능구현 동영상
 영상 링크 : https://youtu.be/sinl5TXBwlA <br>
-![링크를 클릭하시면 홈페이지 구현 영상을 보실 수 있습니다!](./weektest.mp4)
+![위의 링크를 클릭하시면 홈페이지 구현 영상을 보실 수 있습니다!](./weektest.mp4)
 
 
 ## 프로젝트 설계
