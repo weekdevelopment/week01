@@ -45,8 +45,7 @@ html, css, javascript로 작성하였습니다. <br>
 
 
 ## 기능구현 동영상
-<iframe width="560" height="315" src="https://youtu.be/sinl5TXBwlA" frameborder="0" allowfullscreen></iframe> <br>
-
+영상 링크 : https://youtu.be/sinl5TXBwlA <br>
 ![클릭하면 영상을 다운로드 받을 수 있습니다.](./weektest.mp4)
 
 
