@@ -45,7 +45,7 @@ html, css, javascript로 작성하였습니다. <br>
 
 
 ##기능 구현 동영상
-<iframe width="560" height="315" src="./weektest.mp4" frameborder="0" allowfullscreen></iframe>
+![개념적 설계](./weektest.mp4)
 
 
 ## 프로젝트 설계
