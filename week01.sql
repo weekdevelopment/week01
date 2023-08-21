@@ -103,18 +103,6 @@ CREATE VIEW qnalist AS (SELECT a.qno AS qno, a.title AS title, a.content AS cont
 a.author AS author, a.resdate AS resdate, a.cnt AS cnt, a.lev AS lev, a.par AS par, b.name AS NAME
 FROM qna a, member b WHERE a.author=b.id ORDER BY a.par DESC, a.lev ASC, a.qno ASC);
 
--- 자료실 테이블 생성
-CREATE TABLE archive(ano INT PRIMARY KEY AUTO_INCREMENT,
-title VARCHAR(200) NOT NULL,
-attach VARCHAR(200) NOT NULL,
-resdate TIMESTAMP DEFAULT CURRENT_TIMESTAMP());
-
--- 자료실 더미 데이터 삽입
-INSERT INTO ARCHIVE(title, attach) VALUES
-('자료 예시1', 'https://docs.google.com/uc?export=download&id=1OQ05PqEy8f98BXdr1Og3jM3qLY6EUAzg');
-INSERT INTO archive(title, attach) VALUES
-('자료 예시2', 'https://docs.google.com/uc?export=download&id=14XnScacxRq4ChkLiYmHdkEXVoL7el-wG');
-
 -- 자주하는 질문 테이블 생성
 CREATE TABLE faq(fno INT PRIMARY KEY AUTO_INCREMENT,
 question VARCHAR(200) NOT NULL,
