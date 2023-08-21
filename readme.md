@@ -45,7 +45,7 @@ html, css, javascript로 작성하였습니다. <br>
 
 
 ## 기능구현 동영상
-![개념적 설계](./weektest.mp4)
+![클릭하면 영상을 다운로드 받습니다.](./weektest.mp4)
 
 
 ## 프로젝트 설계
